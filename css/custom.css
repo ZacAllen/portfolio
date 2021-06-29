@@ -1,0 +1,39 @@
+.aboutText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+h3 {
+    font-family:'Courier New', Courier, monospace;
+}
+h2 {
+    font-family: 'Bebas Neue', cursive;
+}
+@media screen and (max-width: 600px) {
+    .typewriter {
+        font-size: 2px;
+    }
+}
+.typewriter {
+    font-family:'Courier New', Courier, monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0); }
+  }
