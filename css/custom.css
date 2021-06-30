@@ -2,11 +2,13 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
 }
-
+.skillsText {
+    font-size: 4em;
+}
 h3 {
     font-family:'Courier New', Courier, monospace;
 }
-h2 {
+h2, h1 {
     font-family: 'Bebas Neue', cursive;
 }
 @media screen and (max-width: 600px) {
