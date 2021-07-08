@@ -53,6 +53,13 @@ h2, h1 {
   .form-label.form-label {
     font-family:'Courier New', Courier, monospace;
   }
+  .btn.btn {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2em;
+    border-radius: 0;
+    border:none; 
+    background-color: salmon;
+  }
 
 
   #yourName {
