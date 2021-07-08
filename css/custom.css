@@ -39,3 +39,22 @@ h2, h1 {
     from, to { border-color: transparent }
     50% { border-color: rgb(0, 0, 0); }
   }
+
+  /* Double class trumps single class, better than making everything !important! */
+  .form-control.form-control {
+      /* border: none; */
+      border-radius: 0;
+      /* background-color: rgba(255, 230, 162, 0.411); */
+      border-top: none;
+      border-right: none;
+      border-left: 3px solid salmon;
+      border-bottom: 3px solid salmon;
+  }
+  .form-label.form-label {
+    font-family:'Courier New', Courier, monospace;
+  }
+
+
+  #yourName {
+    
+  }

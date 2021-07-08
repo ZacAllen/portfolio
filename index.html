@@ -46,7 +46,7 @@
                 </div>
         </header>
 
-        <section class="content-section bg-sec" id="about">
+        <section class="content-section" id="about">
             <div class="container px-4 px-lg-5 text-left">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-5" data-aos="fade-up">
@@ -120,30 +120,30 @@
             </div>
         </section>
         <!-- Call to Action-->
-        <section class="content-section bg-prim text-white">
+        <section class="content-section">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Get In Touch With Me</h2>
                 <div class="row">
                     <div class="col"></div>
                     <div class="col-8">
-                        <form>
+                        <form id = "emailForm">
                             <div class="mb-3">
                               <label for="yourName" class="form-label">Your Name</label>
-                              <input type="text" class="form-control" id="yourName" aria-describedby="emailHelp">
+                              <input type="text" class="form-control shadow-none" id="yourName" aria-describedby="emailHelp">
                               
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Email Address</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                              <label for="email" class="form-label">Email Address</label>
+                              <input type="password" class="form-control shadow-none" id="email">
                             </div>
 
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Message</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="messageBody" class="form-label">Message</label>
+                                <textarea class="form-control shadow-none" id="messageBody" rows="5"></textarea>
                               </div>
                             
                             <button type="submit" class="btn btn-primary">Submit</button>
-                          </form>
+                        </form>
                     </div>
                     <div class="col"></div>
                 </div>
