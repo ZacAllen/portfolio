@@ -5,11 +5,14 @@
 .skillsText {
     font-size: 15vh;
 }
+.skillsText .letter {
+    display: inline-block;
+}
 h3 {
     font-family:'Courier New', Courier, monospace;
 }
 h2, h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Fredericka the Great', cursive;
 }
 @media screen and (max-width: 600px) {
     .typewriter {
@@ -54,7 +57,7 @@ h2, h1 {
     font-family:'Courier New', Courier, monospace;
   }
   .btn.btn {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Fredericka the Great', cursive;
     letter-spacing: 0.2em;
     border-radius: 0;
     border:none; 

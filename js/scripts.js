@@ -1,8 +1,7 @@
-/*!
-* Start Bootstrap - Stylish Portfolio v6.0.1 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
-*/
+// import anime from '../anime/lib/anime.es';
+
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
@@ -77,4 +76,6 @@ function fadeIn(el, display) {
             requestAnimationFrame(fade);
         }
     })();
+
+
 };
