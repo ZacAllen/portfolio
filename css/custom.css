@@ -4,6 +4,7 @@
 }
 .skillsText {
     font-size: 15vh;
+    display: none;
 }
 .skillsText .letter {
     display: inline-block;

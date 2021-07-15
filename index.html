@@ -60,19 +60,19 @@
                         <div class="row">
                             <div class="col-4"></div>
                             <div class="col">
-                                <h1 class="skillsText"><em>UI/UX Designer</em></h1>
+                                <h1 id = "uiux" class="skillsText"><em>UI/UX Designer</em></h1>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-1"></div>
                             <div class="col">
-                                <h1 class="skillsText"><em>Front-End</em></h1>
+                                <h1 id = "frontend" class="skillsText"><em>Front-End</em></h1>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-2"></div>
                             <div class="col">
-                                <h1 class="skillsText"><em>Developer</em></h1>
+                                <h1 id = "developer" class="skillsText"><em>Developer</em></h1>
                             </div>
                         </div>
                         
@@ -218,12 +218,20 @@
             var textWrapper = document.querySelector('.skillsText');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+            function showSkillsText () {
+                var text = document.getElementsByClassName('skillsText');
+                Array.prototype.forEach.call(text, function(word) {
+                    word.style.display = 'inline-block';
+                })
+            }
+
             var waypoint = new Waypoint({
                 element: document.getElementById('intro'),
                 handler: function() {
+                    showSkillsText(); //keep text invisible until animated fadein
                     anime.timeline()
                     .add({
-                        targets: '.skillsText .letter',
+                        targets: ['#uiux .letter', '#frontend', '#developer'], 
                         scale: [4,1],
                         opacity: [0,1],
                         translateZ: 0,
@@ -231,10 +239,11 @@
                         duration: 950,
                         delay: (el, i) => 70*i
                     })
+                    this.destroy(); //trigger animation once
                 },
-                offset: '50%',
-                repeat: false
+                offset: '60%'
             })
+            
 
            
         </script>

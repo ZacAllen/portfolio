@@ -67,6 +67,7 @@ function fadeOut(el) {
 };
 
 function fadeIn(el, display) {
+    console.log("Ay holup");
     el.style.opacity = 0;
     el.style.display = display || "block";
     (function fade() {
