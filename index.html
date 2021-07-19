@@ -36,7 +36,8 @@
 
     <body id = "page-top">
         <!-- Navigation-->
-        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <!-- This needs to be a top bar, hamburgers are cringe -->
+        <!-- <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a href="#page-top">Zachary Allen</a></li>
@@ -44,7 +45,7 @@
                 <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
                 <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
         <!-- Header-->
         <header class="masthead d-flex align-items-center" id="home">
@@ -53,25 +54,25 @@
                 </div>
         </header>
 
-        <section class="content-section" id="intro">
-            <div class="container-fluid px-4 px-lg-5 text-left">
+        <section class="content-section-fluid" id="intro">
+            <div class="container-fluid px-4 px-lg-5 text-left" id="skillsBG">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col">
                         <div class="row">
-                            <div class="col-4"></div>
-                            <div class="col">
+                            <div class="col-lg-4 col-sm-1"></div>
+                            <div class="col-lg">
                                 <h1 id = "uiux" class="skillsText"><em>UI/UX Designer</em></h1>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg">
                                 <h1 id = "frontend" class="skillsText"><em>Front-End</em></h1>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2"></div>
-                            <div class="col">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg">
                                 <h1 id = "developer" class="skillsText"><em>Developer</em></h1>
                             </div>
                         </div>
@@ -86,7 +87,7 @@
             </div>
         </section>
         
-        <section class="content-section" id="about">
+        <section class="content-section-fluid" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 vh-100">
                     <div class="col my-auto">
@@ -108,49 +109,49 @@
                     <h3 class="text-secondary mb-0">Portfolio</h3>
                     <h2 class="mb-5">My Projects</h2>
                 </div>
-                <div class="row gx-0">
+                <div class="row gx-3 gy-3">
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="#!" style='border-radius: 10px;'>
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">Himeji Castle</div>
                                     <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/himeji.jpg" alt="..." />
+                            <img class="img-fluid portfolioImage" src="assets/img/himeji.jpg" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="#!" style='border-radius: 10px;'>
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">Fasilides Castle</div>
                                     <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/fasil.jpg" alt="..." />
+                            <img class="img-fluid portfolioImage" src="assets/img/fasil.jpg" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="#!" style='border-radius: 10px;'>
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">Hagia Sophia</div>
                                     <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/hagia.jpg" alt="..." />
+                            <img class="img-fluid portfolioImage" src="assets/img/hagia.jpg" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="#!" style='border-radius: 10px;'>
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">Petra</div>
                                     <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/petra.jpg" alt="..." />
+                            <img class="img-fluid portfolioImage" src="assets/img/petra.jpg" alt="..." />
                         </a>
                     </div>
                 </div>
@@ -224,7 +225,7 @@
                     word.style.display = 'inline-block';
                 })
             }
-
+            //Animate skills section on scroll point
             var waypoint = new Waypoint({
                 element: document.getElementById('intro'),
                 handler: function() {
@@ -238,6 +239,22 @@
                         easing: "easeOutExpo",
                         duration: 950,
                         delay: (el, i) => 70*i
+                    })
+                    this.destroy(); //trigger animation once
+                },
+                offset: '60%'
+            })
+
+            //Fade background color shift on scroll
+            var colorChange = new Waypoint({
+                element: document.getElementById('intro'),
+                handler: function() {
+                    anime.timeline()
+                    .add({
+                        targets: ['#skillsBG', '#about', '#home'],
+                        easing: "easeInOutQuad",
+                        backgroundColor: ['#FCF4C5'],
+                        duration: 950,
                     })
                     this.destroy(); //trigger animation once
                 },
