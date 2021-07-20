@@ -63,10 +63,15 @@ h2, h1 {
       border-right: none;
       border-left: 3px solid salmon;
       border-bottom: 3px solid salmon;
+      background-color: transparent !important;
+  }
+  .form-control.form-control:focus {
+      border-color: #85f875;
   }
   .form-label.form-label {
     font-family:'Courier New', Courier, monospace;
   }
+
   .btn.btn {
     font-family: 'Fredericka the Great', cursive;
     letter-spacing: 0.2em;
