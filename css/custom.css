@@ -1,3 +1,9 @@
+.navbar.navbar {
+    background-color: #46A563;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
 .aboutText {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
