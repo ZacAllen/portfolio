@@ -2,6 +2,15 @@
     background-color: #46A563;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    font-size: 0.8em;
+}
+.navbar-nav > li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#myNavbar .navbar-nav li.active > a {
+    border: 1px solid white;
+    color: white;
 }
 
 .aboutText {

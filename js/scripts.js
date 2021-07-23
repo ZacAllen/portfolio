@@ -80,3 +80,16 @@ function fadeIn(el, display) {
 
 
 };
+
+//Navbar active selector
+let navbarLink = document.getElementsByClassName("nav-item")
+
+document.addEventListener("click", function(e) {
+    console.log(navbarLink.length)
+    for (let x = 0;x < navbarLink.length;x++) {
+      navbarLink[x].classList.remove("active")
+    }
+  
+    e.target.closest("li").classList.add("active")
+ 
+})
