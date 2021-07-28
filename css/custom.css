@@ -12,7 +12,9 @@
     border: 1px solid white;
     color: white;
 }
-
+.mywork:hover {
+    background-color: thistle !important;
+}
 .aboutText {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
@@ -35,7 +37,7 @@ h3 {
     font-family:'Courier New', Courier, monospace;
 }
 h2, h1 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Biryani', sans-serif;
 }
 @media screen and (max-width: 600px) {
     .typewriter {
@@ -46,7 +48,7 @@ h2, h1 {
     }
 }
 .typewriter {
-    font-family:'Courier New', Courier, monospace;
+    font-family:/*'Courier New', Courier, monospace;*/ 'Courier New', Courier, monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -88,7 +90,7 @@ h2, h1 {
   }
 
   .btn.btn {
-    font-family: 'Fredericka the Great', cursive;
+    font-family:'Courier New', Courier, monospace;
     letter-spacing: 0.2em;
     border-radius: 0;
     border:none; 

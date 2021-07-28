@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@800&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- My Custom CSS -->
@@ -45,16 +46,16 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a id= "homelink" class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a id = "aboutlink" class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a id="portfoliolink" class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a id = "contactlink" class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -67,6 +68,7 @@
                 </div>
         </header>
 
+        <!-- Intro Section -->
         <section class="content-section-fluid" id="intro">
             <div class="container-fluid px-4 px-lg-5 text-left" id="skillsBG">
                 <div class="row gx-4 gx-lg-5">
@@ -80,13 +82,13 @@
                         <div class="row">
                             <div class="col-lg-1"></div>
                             <div class="col-lg">
-                                <h1 id = "frontend" class="skillsText"><em>Front-End</em></h1>
+                                <h1 id = "frontend" class="skillsText">Front-End</h1>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-2"></div>
                             <div class="col-lg">
-                                <h1 id = "developer" class="skillsText"><em>Developer</em></h1>
+                                <h1 id = "developer" class="skillsText">Developer</h1>
                             </div>
                         </div>
                         
@@ -99,7 +101,8 @@
                 </div>
             </div>
         </section>
-        
+
+        <!-- About Section -->
         <section class="content-section-fluid" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 vh-100">
@@ -108,14 +111,14 @@
                             I've worked with teams of other developers to prototype software and design web content 
                             to improve end-user interaction and experience.  I hope to contribute to the development industry 
                             and advance my skill set and through compelling software & innovative design.</h3>
-                        <a class="btn btn-primary" href="#portfolio">See My Work</a>    
+                        <a class="btn btn-primary mywork" href="#portfolio">See My Work</a>    
                     </div>
                 </div>
             </div>
 
         </section>
 
-        <!-- Portfolio-->
+        <!-- Portfolio Section-->
         <section class="content-section" id="portfolio">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-end">
@@ -170,7 +173,8 @@
                 </div>
             </div>
         </section>
-        <!-- Call to Action-->
+
+        <!-- Contact Section-->
         <section class="content-section" id = "contact">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Get In Touch With Me</h2>
@@ -201,7 +205,7 @@
             </div>
         </section>
        
-        <!-- Footer-->
+        <!-- Footer Section -->
         <footer class="footer text-center" id = "footer">
             <div class="container px-4 px-lg-5">
                 <h2 class="py-3">Find me on</h2>
@@ -289,7 +293,51 @@
                 },
                 // offset: '60%'
             })
-            
+
+            var homeScroll = new Waypoint({
+                element: document.getElementById('home'),
+                handler: function() {
+                    let homeId = document.getElementById("homelink");
+                    for (let x = 0;x < navbarLink.length;x++) {
+                        navbarLink[x].classList.remove("active")
+                    }
+                    homeId.closest("li").classList.add("active")
+                },
+                offset: '-50%',
+            })
+            var aboutScroll = new Waypoint({
+                element: document.getElementById('about'),
+                handler: function() {
+                    let aboutId = document.getElementById("aboutlink");
+                    for (let x = 0;x < navbarLink.length;x++) {
+                        navbarLink[x].classList.remove("active")
+                    }
+                    aboutId.closest("li").classList.add("active")
+                },
+                offset: '-50%'
+            })
+            var portfolioScroll = new Waypoint({
+                element: document.getElementById('portfolio'),
+                handler: function() {
+                    let portfolioId = document.getElementById("portfoliolink");
+                    for (let x = 0;x < navbarLink.length;x++) {
+                        navbarLink[x].classList.remove("active")
+                    }
+                    portfolioId.closest("li").classList.add("active")
+                },
+                offset: '-50%'
+            })
+            var contactScroll = new Waypoint({
+                element: document.getElementById('contact'),
+                handler: function() {
+                    let contactId = document.getElementById("contactlink");
+                    for (let x = 0;x < navbarLink.length;x++) {
+                        navbarLink[x].classList.remove("active")
+                    }
+                    contactId.closest("li").classList.add("active")
+                },
+                offset: '-50%'
+            })
 
            
         </script>

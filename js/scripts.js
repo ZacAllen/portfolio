@@ -81,15 +81,21 @@ function fadeIn(el, display) {
 
 };
 
+
+var elementIsClicked = false; // declare the variable that tracks the state
+function clickHandler(){ // declare a function that updates the state
+  elementIsClicked = true;
+}
+
 //Navbar active selector
 let navbarLink = document.getElementsByClassName("nav-item")
+// navbarLink.addEventListener("click", clickHandler);
 
-document.addEventListener("click", function(e) {
-    console.log(navbarLink.length)
-    for (let x = 0;x < navbarLink.length;x++) {
-      navbarLink[x].classList.remove("active")
-    }
-  
-    e.target.closest("li").classList.add("active")
- 
-})
+// document.addEventListener("click", function(e) {
+//     if (e.target.classList.contains("nav-link")) { 
+//         for (let x = 0;x < navbarLink.length;x++) {
+//         navbarLink[x].classList.remove("active")
+//         }
+//         e.target.closest("li").classList.add("active")
+//     }
+// })
