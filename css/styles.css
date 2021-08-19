@@ -262,7 +262,7 @@ footer.footer .social-link:hover {
     height: 100vh;
   }
   .masthead h1, .masthead .h1 {
-    font-size: 5.5rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -325,7 +325,7 @@ footer.footer .social-link:hover {
             clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: #DEFCEC;
+    background-color: salmon;
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }

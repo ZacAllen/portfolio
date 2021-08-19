@@ -20,7 +20,8 @@
     font-size: 1.2em;
 }
 .skillsText {
-    font-size: 15vh;
+    font-size: 4rem;
+    font-weight: 800;
     display: none;
 }
 .skillsText .letter {
@@ -32,12 +33,20 @@
 
 .portfolioImage {
     border-radius: 10px;
+    /* box-shadow:  3px 3px 1px grey; */
+}
+.portfolio-item.portfolio-item {
+    
 }
 h3 {
     font-family:'Courier New', Courier, monospace;
 }
 h2, h1 {
-    font-family: 'Biryani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#homeTitle {
+    font-weight: 300 !important;
 }
 @media screen and (max-width: 600px) {
     .typewriter {
@@ -48,14 +57,14 @@ h2, h1 {
     }
 }
 .typewriter {
-    font-family:/*'Courier New', Courier, monospace;*/ 'Courier New', Courier, monospace;
+    font-family:/*'Courier New', Courier, monospace;*/ 'Montserrat', sans-serif;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .05em; /* Adjust as needed */
     animation: 
-      typing 2.5s steps(40, end),
+      typing 2.5s steps(30, end),
       blink-caret .75s step-end infinite;
   }
   

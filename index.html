@@ -15,7 +15,7 @@
         <!-- Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@800&display=swap" rel="stylesheet">
@@ -62,10 +62,32 @@
         </nav>
 
         <!-- Header-->
-        <header class="masthead d-flex align-items-center" id="home">
+        <header class="masthead d-flex align-items-center homeContainer" id="home">
             <div class="container px-4 px-lg-5">
-                <h1 class="typewriter headerText mb-1 text-center">Hey, I'm Zach Allen!</h1>  
+                <div class="row">
+                    <div class="col-lg-3 col-sm-1">
+
+                    </div>
+                    <div class="col-lg-6 col-sm-10">
+                        <h1 id ="homeTitle" class="typewriter headerText mb-1 text-center">Hey, I'm Zach Allen!</h1> 
+                    </div>
+                    <div class="col-lg-3 col-sm-1">
+
+                    </div>
+
                 </div>
+                <div class="row">
+                    <div class="col-6">
+                        <h1 id = "uiux" class="skillsText">UI/UX Designer</h1>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <h1 id = "frontend" class="skillsText">Front-End Developer</h1>
+                    </div>
+                </div>
+                 
+            </div>
         </header>
 
         <!-- Intro Section -->
@@ -73,31 +95,21 @@
             <div class="container-fluid px-4 px-lg-5 text-left" id="skillsBG">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-1"></div>
-                            <div class="col-lg">
-                                <h1 id = "uiux" class="skillsText"><em>UI/UX Designer</em></h1>
-                            </div>
+                        <!-- <div class="row">
+                        <div class="col-1"></div>
+                            <div class="col-6">
+                                <h1 id = "uiux" class="skillsText">UI/UX Designer</h1>
+                            </div>    
+                            <div class="col"></div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-1"></div>
+                           <div class="col-1"></div>
                             <div class="col-lg">
-                                <h1 id = "frontend" class="skillsText">Front-End</h1>
+                                <h1 id = "frontend" class="skillsText">Front-End Developer</h1>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg">
-                                <h1 id = "developer" class="skillsText">Developer</h1>
-                            </div>
-                        </div>
-                        
-                        
-                        
+                        </div> -->
+
                     </div>
-                    <!-- <div class="col-lg-6 mx-auto" data-aos="fade-left">
-                        <img src= "assets/img/me.jpg" style="max-width: 60%; border-radius: 50%; float: right;">
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -107,7 +119,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 vh-100">
                     <div class="col my-auto">
-                        <h3 class="aboutText mb-5 text-left">I'm a recent Georgia Tech grad with a Bachelor's in Computational Media, with concentrations in Digital Media and Interaction Design.
+                        <h3 id = "aboutTitle" class="aboutText mb-5 text-left">I'm a recent Georgia Tech grad with a Bachelor's in Computational Media, with concentrations in Digital Media and Interaction Design.
                             I've worked with teams of other developers to prototype software and design web content 
                             to improve end-user interaction and experience.  I hope to contribute to the development industry 
                             and advance my skill set and through compelling software & innovative design.</h3>
@@ -123,7 +135,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-end">
                     <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">My Projects</h2>
+                    <h2 id = "portfolioTitle" class="mb-5">My Projects</h2>
                 </div>
                 <div class="row gx-3 gy-3">
                     <div class="col-lg-6">
@@ -177,7 +189,7 @@
         <!-- Contact Section-->
         <section class="content-section" id = "contact">
             <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Get In Touch With Me</h2>
+                <h2 id = "contactTitle" class="mb-4">Get In Touch With Me</h2>
                 <div class="row">
                     <div class="col"></div>
                     <div class="col-8">
@@ -231,6 +243,24 @@
         <script>
             AOS.init();
         </script>
+        <script>
+            let mainContainer = document.querySelector('.homeContainer');
+            let mainHeight = mainContainer.offsetHeight;
+            let mainWidth = mainContainer.offsetWidth;
+            anime.timeline() 
+                .add({
+                    targets: '#homeTitle',
+                    translateX: {
+                        value: mainWidth * -0.25,
+                    },
+                    translateY: {
+                        value: mainHeight * -0.2,
+                    }, 
+                    duration: 800,
+                    delay: 2900,
+                    easing: 'linear'
+                })
+        </script>
         
         <script>
             var textWrapper = document.querySelector('.skillsText');
@@ -242,11 +272,7 @@
                     word.style.display = 'inline-block';
                 })
             }
-            //Animate skills section on scroll point
-            var waypoint = new Waypoint({
-                element: document.getElementById('intro'),
-                handler: function() {
-                    showSkillsText(); //keep text invisible until animated fadein
+            showSkillsText(); //keep text invisible until animated fadein
                     anime.timeline()
                     .add({
                         targets: ['#uiux .letter', '#frontend', '#developer'], 
@@ -255,12 +281,27 @@
                         translateZ: 0,
                         easing: "easeOutExpo",
                         duration: 950,
-                        delay: (el, i) => 70*i
+                        delay: 3200 + ((el, i) => 70*i)
                     })
-                    this.destroy(); //trigger animation once
-                },
-                offset: '60%'
-            })
+            //Animate skills section on scroll point
+            // var waypoint = new Waypoint({
+            //     element: document.getElementById('intro'),
+            //     handler: function() {
+            //         showSkillsText(); //keep text invisible until animated fadein
+            //         anime.timeline()
+            //         .add({
+            //             targets: ['#uiux .letter', '#frontend', '#developer'], 
+            //             scale: [4,1],
+            //             opacity: [0,1],
+            //             translateZ: 0,
+            //             easing: "easeOutExpo",
+            //             duration: 950,
+            //             delay: (el, i) => 70*i
+            //         })
+            //         this.destroy(); //trigger animation once
+            //     },
+            //     offset: '60%'
+            // })
 
             //Fade background color shift on scroll
             var colorChange = new Waypoint({
@@ -295,7 +336,7 @@
             })
 
             var homeScroll = new Waypoint({
-                element: document.getElementById('home'),
+                element: document.getElementById('homeTitle'),
                 handler: function() {
                     let homeId = document.getElementById("homelink");
                     for (let x = 0;x < navbarLink.length;x++) {
@@ -303,10 +344,10 @@
                     }
                     homeId.closest("li").classList.add("active")
                 },
-                offset: '-50%',
+                // offset: '-40%',
             })
             var aboutScroll = new Waypoint({
-                element: document.getElementById('about'),
+                element: document.getElementById('aboutTitle'),
                 handler: function() {
                     let aboutId = document.getElementById("aboutlink");
                     for (let x = 0;x < navbarLink.length;x++) {
@@ -314,10 +355,10 @@
                     }
                     aboutId.closest("li").classList.add("active")
                 },
-                offset: '-50%'
+                offset: '50%'
             })
             var portfolioScroll = new Waypoint({
-                element: document.getElementById('portfolio'),
+                element: document.getElementById('portfolioTitle'),
                 handler: function() {
                     let portfolioId = document.getElementById("portfoliolink");
                     for (let x = 0;x < navbarLink.length;x++) {
@@ -325,10 +366,10 @@
                     }
                     portfolioId.closest("li").classList.add("active")
                 },
-                offset: '-50%'
+                offset: '50%'
             })
             var contactScroll = new Waypoint({
-                element: document.getElementById('contact'),
+                element: document.getElementById('contactTitle'),
                 handler: function() {
                     let contactId = document.getElementById("contactlink");
                     for (let x = 0;x < navbarLink.length;x++) {
@@ -336,7 +377,7 @@
                     }
                     contactId.closest("li").classList.add("active")
                 },
-                offset: '-50%'
+                offset: '50%'
             })
 
            
