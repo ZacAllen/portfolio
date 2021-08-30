@@ -3,6 +3,10 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 0.8em;
+    border-bottom: 2px solid black;
+}
+body {
+    background-color: #46A563 !important;
 }
 .navbar-nav > li {
     margin-left: 10px;
@@ -17,7 +21,7 @@
 }
 .aboutText {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .skillsText {
     font-size: 4rem;
@@ -32,7 +36,7 @@
 }
 
 .portfolioImage {
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* box-shadow:  3px 3px 1px grey; */
 }
 .portfolio-item.portfolio-item {
@@ -57,7 +61,7 @@ h2, h1 {
     }
 }
 .typewriter {
-    font-family:/*'Courier New', Courier, monospace;*/ 'Montserrat', sans-serif;
+    font-family:'Courier New', Courier, monospace; /*'Montserrat', sans-serif;*/
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */

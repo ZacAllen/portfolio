@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import anime from '../node_modules/animejs/lib/anime.min.js';
+import Waypoint from '../node_modules/waypoints/lib/noframework.waypoints.min.js';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <Nav/>
+    <Landing /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

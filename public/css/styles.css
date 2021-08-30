@@ -84,7 +84,7 @@ progress {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   max-width: 100%;
   height: auto;
 }
@@ -247,7 +247,7 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/");
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -325,7 +325,7 @@ footer.footer .social-link:hover {
             clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: salmon;
+    background-color: black;
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
