@@ -1,26 +1,54 @@
 .navbar.navbar {
-    background-color: #46A563;
+    background-color: var(--bs-primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 0.8em;
+    /* width: 90%; */
+}
+.navContainer {
     border-bottom: 2px solid black;
+    max-width: 91vw !important;
+}
+.darkMode {
+    margin-left: 10vw;
+}
+.buttonActive {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 500px;  
+    padding: 5px 10px 5px 10px;
+    color: var(--bs-primary);
+}
+.modeContainer {
+    margin: 0 !important;
+}
+.buttonInactive {
+    background-color: none;
+    border: 2px solid black;
+    border-radius: 500px;  
+    padding: 5px 10px 5px 10px;
+    color: white;
 }
 body {
-    background-color: #46A563 !important;
+    background-color: var(--bs-primary) !important;
+    overflow-x: hidden;
 }
 .navbar-nav > li {
     margin-left: 10px;
     margin-right: 10px;
 }
 #myNavbar .navbar-nav li.active > a {
-    border: 1px solid white;
-    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: black;
+    border-radius: 50px;
+    color: var(--bs-primary);
 }
 .mywork:hover {
     background-color: thistle !important;
 }
 .aboutText {
     font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
     font-size: 1em;
 }
 .skillsText {
@@ -31,13 +59,39 @@ body {
 .skillsText .letter {
     display: inline-block;
 }
-#skillsBG, #about #home {
+#about {
     /* background-color: white; */
 }
-
+.portPadding {
+    /* padding-top: 5em; */
+    position: sticky !important;
+    top: 100px;
+}
+.PortfolioTitle {
+    position: sticky !important;
+    top: 80px;
+    background-color: var(--bs-primary);
+}
+.portfolioColumn {
+    background: repeating-linear-gradient(
+        135deg,
+        rgba(0,0,0, 0.8),
+        rgba(0,0,0, 0.8) 50px,
+        rgba(0,0,0, 0.0) 50px,
+        rgba(0,0,0, 0.0) 60px
+    )
+}
+#portfolio {
+    font-size: 1rem;
+}
+#myProjects {
+    font-size: 5rem;
+}
 .portfolioImage {
     /* border-radius: 10px; */
     /* box-shadow:  3px 3px 1px grey; */
+    width: 100%;
+    border: 10% solid black;
 }
 .portfolio-item.portfolio-item {
     
@@ -46,7 +100,7 @@ h3 {
     font-family:'Courier New', Courier, monospace;
 }
 h2, h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 #homeTitle {
