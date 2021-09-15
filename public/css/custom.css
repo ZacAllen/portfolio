@@ -1,13 +1,16 @@
 .navbar.navbar {
     background-color: var(--bs-primary);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
     font-size: 0.8em;
-    /* width: 90%; */
+    padding-top: 20px;
+    /* padding-bottom: 0; */
+    
 }
 .navContainer {
     border-bottom: 2px solid black;
     max-width: 91vw !important;
+    /* filter: drop-shadow(0px 3px 3px black); */
+    box-shadow: 0 5px 6px -7px #000000;
 }
 .darkMode {
     margin-left: 10vw;
@@ -37,6 +40,14 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
+#myNavbar {
+    z-index: 2 !important;
+    /* background-image: url('http://localhost:3000/static/media/wall1.e5d1abff.jpg'); */
+    /* background: inherit; */
+}
+#myNavbar .nav-link {
+    color: black;
+}
 #myNavbar .navbar-nav li.active > a {
     border: 1px solid rgb(0, 0, 0);
     background-color: black;
@@ -65,27 +76,32 @@ body {
 .portPadding {
     /* padding-top: 5em; */
     position: sticky !important;
-    top: 100px;
+    top: 200px;
 }
 .PortfolioTitle {
     position: sticky !important;
-    top: 80px;
-    background-color: var(--bs-primary);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    top: 120px;
+    /* background-color: var(--bs-primary); */
 }
 .portfolioColumn {
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
         135deg,
         rgba(0,0,0, 0.8),
         rgba(0,0,0, 0.8) 50px,
         rgba(0,0,0, 0.0) 50px,
         rgba(0,0,0, 0.0) 60px
-    )
+    ) */
 }
 #portfolio {
-    font-size: 1rem;
+    font-size: 1em;
+    /* font-weight: 800; */
 }
 #myProjects {
-    font-size: 5rem;
+    font-size: 8em;
+    word-wrap:break-word;
+    letter-spacing: 5px;
 }
 .portfolioImage {
     /* border-radius: 10px; */
@@ -97,10 +113,10 @@ body {
     
 }
 h3 {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 h2, h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Bebas Neue', cursive;
 }
 
 #homeTitle {
@@ -115,7 +131,8 @@ h2, h1 {
     }
 }
 .typewriter {
-    font-family:'Courier New', Courier, monospace; /*'Montserrat', sans-serif;*/
+    font-family: 'Bebas Neue', cursive; /*'Montserrat', sans-serif;*/
+    font-weight: 800;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -145,8 +162,8 @@ h2, h1 {
       /* background-color: rgba(255, 230, 162, 0.411); */
       border-top: none;
       border-right: none;
-      border-left: 3px solid salmon;
-      border-bottom: 3px solid salmon;
+      border-left: 3px solid rgb(0, 0, 0);
+      border-bottom: 3px solid rgb(0, 0, 0);
       background-color: transparent !important;
   }
   .form-control.form-control:focus {
@@ -161,10 +178,28 @@ h2, h1 {
     letter-spacing: 0.2em;
     border-radius: 0;
     border:none; 
-    background-color: salmon;
+    background-color: rgb(0, 0, 0);
   }
 
 
   #yourName {
     
+  }
+
+  .Resume {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    /* height: 300vh; */
+    /* z-index: 1000; */
+  }
+  .dummy {
+
+  }
+  .resumeContainer {
+
+  }
+  .parallax-inner.parallax-inner {
+      z-index: 1000;
+      position: relative;
+      /* Needed to prevent z inded from being invalidated by transform */
   }

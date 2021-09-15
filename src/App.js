@@ -4,18 +4,33 @@ import logo from './logo.svg';
 import Landing from './Landing.js';
 import Nav from './Nav';
 import Portfolio from './Portfolio';
+import Resume from './Resume';
+import Contact from './Contact';
+import Footer from './Footer';
+import Backgrounds from './Backgrounds';
 
 class App extends Component {
   render() {
     return (
-      <div className = 'App'>
-        <Nav></Nav>
-        <header className="masthead homeContainer" id="home">
-        <Landing></Landing>
-        </header>
-        <section id = "portfolio">
-        <Portfolio></Portfolio>
-        </section>
+      <div className = 'App' style={{position: 'relative'}}>
+        <Backgrounds></Backgrounds>
+
+        <div style={{position: 'absolute'}}>
+          <Nav></Nav>
+          <header className="masthead homeContainer" id="home">
+          <Landing></Landing>
+          </header>
+          <section id = "portfolio">
+          <Portfolio></Portfolio>
+          </section>
+          <section className="Resume" id="resumeSection">
+          <Resume></Resume>  
+          </section>
+          <section class="content-section" id = "contact">
+          <Contact></Contact>  
+          </section>
+          <Footer></Footer>
+        </div>
         
       </div>
     )

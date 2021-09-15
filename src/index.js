@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import anime from '../node_modules/animejs/lib/anime.min.js';
 import Waypoint from '../node_modules/waypoints/lib/noframework.waypoints.min.js';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
   <React.StrictMode>
+    <ParallaxProvider>
     <App />
     {/* <Nav/>
     <Landing /> */}
+    </ParallaxProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -9,6 +9,7 @@ import himeji from './himeji.jpg';
 import fasil from './fasil.jpg';
 import hagia from './hagia.jpg'
 
+
 class Landing extends Component {   
 
     render() {
@@ -56,7 +57,7 @@ class Landing extends Component {
                             </div>
                         </Anime>
                     </Col>
-                    <Col xl={{span: 15, offset: -1}}>
+                    <Col xl={{span: 15, offset: -1}} style={{paddingRight: 0}}>
                         <Anime opacity={[0,1]} translateX={[500, 0]} delay={2800} duration={500} easing={'linear'}>
                             <Carousel dotPosition={dotPosition} autoplay style={contentStyle} id="gallery">
                                     

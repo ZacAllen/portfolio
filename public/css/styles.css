@@ -17,6 +17,7 @@
   --bs-gray-dark: #343a40;
   /* --bs-primary: #46A563  !important; */
   --bs-primary: #2de664  !important;
+  --bs-primaryOpaque: rgba(45, 230, 100, 0.3); 
   --bs-secondary: #FFE5D0 !important;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -270,9 +271,10 @@ footer.footer .social-link:hover {
 .portfolio-item {
   display: block;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-width: 530px;
   margin: auto auto 1rem;
+  border: 150px solid rgba(0, 0, 0, 0.8);
 }
 .portfolio-item .caption {
   display: flex;
@@ -295,6 +297,11 @@ footer.footer .social-link:hover {
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
   font-size: 1.2rem;
+}
+@media(max-width: 560px) {
+  .portfolio-item {
+    border: 15px solid rgba(0, 0, 0, 0.8);
+  }
 }
 @media (min-width: 992px) {
   .portfolio-item {

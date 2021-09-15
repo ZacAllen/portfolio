@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Divider, Carousel, Image } from 'antd';
-
+import { Parallax } from 'react-scroll-parallax';
 
 
 class Portfolio extends Component {
@@ -13,7 +13,7 @@ class Portfolio extends Component {
           </div>
           {/* <div className="PortfolioGallery"> */}
            <Row gutter={[40, 16]}>
-               <Col xl={{span: 15, offset: 1}}>
+               <Col xl={{span: 13, offset: 1}}>
                     <Row style={{marginBottom: '5%'}}>
                         <Col xl={{span: 23}}>
                             <a className="portfolio-item" href="#!" >
@@ -53,7 +53,7 @@ class Portfolio extends Component {
                             </a>
                         </Col>
                     </Row>
-                    <Row style={{marginBottom: '5%'}}>
+                    <Row>
                         <Col xl={{span: 23}}>
                             <a className="portfolio-item" href="#!" >
                                 <div className="caption">
@@ -67,10 +67,14 @@ class Portfolio extends Component {
                         </Col>
                     </Row>
                </Col>
-               <Col className ="portfolioColumn" xl={{span: 7, offset: -1}}>
+               
+               <Col className ="portfolioColumn" xl={{span: 9, }}>
                     <div className="content-section-heading PortfolioTitle">
+                        <div style={{padding: '10px'}}>
                             <h3 id = "portfolio" className="text-secondary mb-0">Portfolio</h3>
-                            <h1 id = "myProjects" className="mb-5">My Projects</h1>
+                            <h1 id = "myProjects" className="mb-5">MY PROJECTS</h1>
+                        </div>
+                            
                     </div>
                </Col>
 
