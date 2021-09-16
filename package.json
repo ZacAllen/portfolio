@@ -19,6 +19,7 @@
     "react-pure-lifecycle": "^3.0.0",
     "react-scripts": "4.0.3",
     "react-scroll-parallax": "^2.4.0",
+    "react-scrollspy": "^3.4.3",
     "waypoints": "^4.0.1",
     "web-vitals": "^1.1.2"
   },

@@ -3,11 +3,12 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8em;
     padding-top: 20px;
+    box-shadow: 0 5px 6px -7px #000000;
     /* padding-bottom: 0; */
     
 }
 .navContainer {
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     max-width: 91vw !important;
     /* filter: drop-shadow(0px 3px 3px black); */
     box-shadow: 0 5px 6px -7px #000000;
@@ -49,9 +50,9 @@ body {
     color: black;
 }
 #myNavbar .navbar-nav li.active > a {
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     background-color: black;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     color: var(--bs-primary);
 }
 .mywork:hover {

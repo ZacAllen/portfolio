@@ -42,9 +42,7 @@ function Resume (props) {
 
         
     const scrollPercent = () => {
-        var section = document.getElementById('resumeSection');
-        
-        
+
         const bodyST = document.body.scrollTop;
         const docST = document.documentElement.scrollTop;
         const docSH = document.documentElement.scrollHeight;

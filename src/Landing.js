@@ -11,7 +11,7 @@ import hagia from './hagia.jpg'
 
 
 class Landing extends Component {   
-
+ 
     render() {
         const contentStyle = {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -35,6 +35,8 @@ class Landing extends Component {
         }
 
         const dotPosition = 'right';
+
+        
 
         return (
             <div className='LandingComponent'>
