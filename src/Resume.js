@@ -68,7 +68,7 @@ function Resume (props) {
             width: '350px',
             height: '350px',
             // backgroundColor: 'var(--bs-primary)',
-            border: '2px solid var(--bs-primary)',
+            border: '2px solid var(--bs-primaryColor)',
             position: 'relative',  
             
         };

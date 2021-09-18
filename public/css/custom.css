@@ -1,5 +1,5 @@
 .navbar.navbar {
-    background-color: var(--bs-primary);
+    background-color: var(--bs-primaryColor);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8em;
     padding-top: 20px;
@@ -21,7 +21,7 @@
     border: 2px solid black;
     border-radius: 500px;  
     padding: 5px 10px 5px 10px;
-    color: var(--bs-primary);
+    color: var(--bs-primaryColor);
 }
 .modeContainer {
     margin: 0 !important;
@@ -34,7 +34,7 @@
     color: white;
 }
 body {
-    background-color: var(--bs-primary) !important;
+    background-color: var(--bs-primaryColor) !important;
     overflow-x: hidden;
 }
 .navbar-nav > li {
@@ -47,13 +47,13 @@ body {
     /* background: inherit; */
 }
 #myNavbar .nav-link {
-    color: black;
+    color: var(--bs-fontColor);
 }
 #myNavbar .navbar-nav li.active > a {
     border: 2px solid rgb(0, 0, 0);
-    background-color: black;
+    background-color: var(--bs-activeButtonBGColor);
     /* border-radius: 50px; */
-    color: var(--bs-primary);
+    color: var(--bs-primaryColor);
 }
 .mywork:hover {
     background-color: thistle !important;
@@ -84,7 +84,7 @@ body {
     margin-top: 10%;
     margin-bottom: 10%;
     top: 120px;
-    /* background-color: var(--bs-primary); */
+    /* background-color: var(--bs-primaryColor); */
 }
 .portfolioColumn {
     /* background: repeating-linear-gradient(
@@ -115,9 +115,11 @@ body {
 }
 h3 {
     font-family: 'Montserrat', sans-serif;
+    color: var(--bs-fontColor) !important;
 }
 h2, h1 {
     font-family: 'Bebas Neue', cursive;
+    color: var(--bs-fontColor) !important;
 }
 
 #homeTitle {

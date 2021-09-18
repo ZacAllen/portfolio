@@ -5,21 +5,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Scrollspy from 'react-scrollspy'
 
 class Nav extends Component {
-    componentDidMount() {
-        const navElements = document.getElementById("myNavbar").getElementsByClassName("nav-item");
-        const homeContainer = document.getElementById("aboutContent");
-        const portfolioContainer = document.getElementById("myProjects");
-        const resumeContainer = document.getElementById("resume");
-        const contactContainer = document.getElementById("contactTitle")
-    }
+
     render() {
 
-        
-            
-            // const navElements = "";
-            
-            
-            
+        const switchDarkMode = (btn) => {
+            console.log("TIME FOR DARKNESS!!!")
+            let on = document.getElementById('on');
+            let off = document.getElementById('off');
+
+            on.className = "buttonActive";
+                on.style.color = "#FFFFFF";
+            off.className = "buttonInactive";
+
+            let root = document.documentElement;
+            root.style.setProperty('--bs-primaryColor', '#212529');
+            root.style.setProperty('--bs-fontColor', '#FFFFFF');
+            root.style.setProperty('--bs-activeButtonBGColor', '#FFFFFF')
+        }
+
+        const offDarkMode = (btn) => {
+            let on = document.getElementById('on');
+            let off = document.getElementById('off');
+
+            off.className = "buttonActive";
+                // off.style.color = "#FFFFFF";
+            on.className = "buttonInactive";
+
+            let root = document.documentElement;
+            root.style.setProperty('--bs-primaryColor', '#2de664');
+            root.style.setProperty('--bs-fontColor', '#000000');
+            root.style.setProperty('--bs-activeButtonBGColor', '#000000')
+        }
             
         return (
             <Row>
@@ -48,10 +64,10 @@ class Nav extends Component {
                                         <a id= "darkMode" className="nav-link darkMode">Dark Mode:</a>
                                     </li>
                                     <li className="nav-item modeContainer">
-                                        <a id= "" className="nav-link" href=""><span className="buttonInactive">On</span></a>
+                                        <a  className="nav-link" ><span id= "on" className="buttonInactive" onClick={switchDarkMode}>On</span></a>
                                     </li>
                                     <li className="nav-item modeContainer">
-                                        <a id= "" className="nav-link" href=""><span className="buttonActive">Off</span></a>
+                                        <a className="nav-link" ><span id= "off" className="buttonActive" onClick={offDarkMode}>Off</span></a>
                                     </li>
                                     </Scrollspy>
                             </div>

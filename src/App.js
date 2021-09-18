@@ -26,7 +26,7 @@ class App extends Component {
           <section className="Resume" id="resumeSection">
           <Resume></Resume>  
           </section>
-          <section class="content-section" id = "contact">
+          <section className="content-section" id = "contact">
           <Contact></Contact>  
           </section>
           <Footer></Footer>

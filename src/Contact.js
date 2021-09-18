@@ -24,14 +24,14 @@ function Contact(props) {
                 <div className="col-8">
                     <form className = "contact-form" id = "emailForm" onSubmit={sendEmail}>
                         
-                          <label for="yourName" className="form-label">Your Name</label>
+                          <label className="form-label">Your Name</label>
                           <input name="from_name" type="text" className="form-control shadow-none mb-4" id="name"></input>
                    
-                          <label for="email" className="form-label">Email Address</label>
+                          <label className="form-label">Email Address</label>
                           <input name="reply_to" type="email" className="form-control shadow-none mb-4" id="email"></input>
                    
     
-                          <label for="messageBody" className="form-label">Message</label>
+                          <label  className="form-label">Message</label>
                           <textarea name="message" className="form-control shadow-none mb-4" id="message" rows="5"></textarea>
                     
                         
