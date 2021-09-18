@@ -20,7 +20,8 @@ class Nav extends Component {
             let root = document.documentElement;
             root.style.setProperty('--bs-primaryColor', '#212529');
             root.style.setProperty('--bs-fontColor', '#FFFFFF');
-            root.style.setProperty('--bs-activeButtonBGColor', '#FFFFFF')
+            root.style.setProperty('--bs-activeButtonBGColor', '#FFFFFF');
+            root.style.setProperty('--bs-bgOpacityValue', 0.1)
         }
 
         const offDarkMode = (btn) => {
@@ -35,6 +36,7 @@ class Nav extends Component {
             root.style.setProperty('--bs-primaryColor', '#2de664');
             root.style.setProperty('--bs-fontColor', '#000000');
             root.style.setProperty('--bs-activeButtonBGColor', '#000000')
+            root.style.setProperty('--bs-bgOpacityValue', 0.3)
         }
             
         return (
@@ -54,7 +56,7 @@ class Nav extends Component {
                                         <a id="portfoliolink" className="nav-link" href="#portfolio">Portfolio</a>
                                     </li>
                                     <li id="ABOUT" className="nav-item">
-                                        <a id = "aboutlink" className="nav-link" href="#resume">Resume</a>
+                                        <a id = "aboutlink" className="nav-link" href="#firstSection">Resume</a>
                                     </li>
                                     <li id="CONTACT" className="nav-item">
                                         <a id = "contactlink" className="nav-link" href="#contact">Contact</a>

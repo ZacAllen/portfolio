@@ -80,7 +80,8 @@ function Resume (props) {
             display: 'flex',
             // alignItems: 'center',
             // justifyContent: 'center',
-            zIndex: 1000,
+            zIndex: 1
+            // zIndex: 1000
             // padding: '200px',
             
         }
@@ -112,7 +113,7 @@ function Resume (props) {
                             <div id="firstSection" className="" style={firstSectionStyle}>
                                
                                 <div id="dummyModal"className="dummy" style={DummyModalStyle}>
-                                    <h3 style={{color: '#FFFFFF'}}>Download My Resume</h3>
+                                    <h3 className="downloadMyResume">Download My Resume</h3>
                                 </div>
                                 
                                
