@@ -10,8 +10,6 @@ ReactDOM.render(
   <React.StrictMode>
     <ParallaxProvider>
     <App />
-    {/* <Nav/>
-    <Landing /> */}
     </ParallaxProvider>
   </React.StrictMode>,
   document.getElementById('root')

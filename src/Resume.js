@@ -103,27 +103,27 @@ function Resume (props) {
         return (
             <div>
                 <Row  gutter={[40, 16]} style={paddingContainer}></Row>
-                {/* <Parallax className="custom-class" y={[20, -20]}> */}
+                
                 <Row gutter={[40, 16]} className=" vw-100">
                     <Col xl={{span: 24}}>
-                    
-                        {/* <Image src={hagia}></Image> */}
+                    {/* <Parallax className="custom-class" y={[20, -20]}> */}
+                   
                         <div id="resume" className="resumeContainer" style={ContainerStyle}>
                             <div id="firstSection" className="" style={firstSectionStyle}>
                                
                                 <div id="dummyModal"className="dummy" style={DummyModalStyle}>
                                     <h3 style={{color: '#FFFFFF'}}>Download My Resume</h3>
                                 </div>
-                        
+                                
                                
                             </div>
                             
                         </div>
-                    
+                        {/* </Parallax> */}
                     </Col>
                     
                 </Row>
-                {/* </Parallax> */}
+                
             </div>
         )
     

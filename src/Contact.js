@@ -1,33 +1,45 @@
-import React, {Component} from "react";
+import React, {Component, Form, Button, Input, TextArea} from "react";
+import emailjs from 'emailjs-com';
 
 function Contact(props) {
+
+    const sendEmail = (e) => {
+        console.log(e.target);
+        e.preventDefault();
+        
+        emailjs.sendForm('service_1912', 'contact_template2', e.target, 'user_9JRV3Xm9g3W8fkPvlppiT')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            })
+    }
+
     return (
         
-        <div class="container px-4 px-lg-5 text-center">
-            <h2 id = "contactTitle" class="mb-4">Get In Touch With Me</h2>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-8">
-                    <form id = "emailForm">
-                        <div class="mb-3">
-                          <label for="yourName" class="form-label">Your Name</label>
-                          <input type="text" class="form-control shadow-none" id="yourName" aria-describedby="emailHelp"></input>
-                          
-                        </div>
-                        <div class="mb-3">
-                          <label for="email" class="form-label">Email Address</label>
-                          <input type="text" class="form-control shadow-none" id="email"></input>
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="messageBody" class="form-label">Message</label>
-                            <textarea class="form-control shadow-none" id="messageBody" rows="5"></textarea>
-                          </div>
+        <div className="container px-4 px-lg-5 text-center">
+            <h2 id = "contactTitle" className="mb-4">Get In Touch With Me</h2>
+            <div className="row">
+                <div className="col"></div>
+                <div className="col-8">
+                    <form className = "contact-form" id = "emailForm" onSubmit={sendEmail}>
                         
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                          <label for="yourName" className="form-label">Your Name</label>
+                          <input name="from_name" type="text" className="form-control shadow-none mb-4" id="name"></input>
+                   
+                          <label for="email" className="form-label">Email Address</label>
+                          <input name="reply_to" type="email" className="form-control shadow-none mb-4" id="email"></input>
+                   
+    
+                          <label for="messageBody" className="form-label">Message</label>
+                          <textarea name="message" className="form-control shadow-none mb-4" id="message" rows="5"></textarea>
+                    
+                        
+                        <button type="submit" value="Send"className="btn btn-primary">Submit</button>
                     </form>
+        
                 </div>
-                <div class="col"></div>
+                <div className="col"></div>
             </div>
         </div>
     )
