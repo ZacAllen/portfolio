@@ -4,10 +4,10 @@ import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Anime, { anime } from 'react-anime';
 import Waypoint from '../node_modules/waypoints/lib/noframework.waypoints.min.js';
-import petra from './petra.jpg';
-import himeji from './himeji.jpg';
-import fasil from './fasil.jpg';
-import hagia from './hagia.jpg'
+import me1 from './assets/img/me1.png';
+import me2 from './assets/img/me2.png';
+import me3 from './assets/img/me3.png';
+
 
 
 class Landing extends Component {   
@@ -19,15 +19,16 @@ class Landing extends Component {
             textAlign:'center',
             width: '100%',
             // height: '75vh',
-            border: '15vh solid rgba(0, 0, 0, .8)',
+            border: '10vh solid rgba(0, 0, 0, .8)',
             // display:'flex',
             alignItems: 'center',
             justifyContent:'center',
-            position: 'relative'
+            position: 'relative',
+            filter: 'var(--bs-grayscale)'
         };
         const imgStyle = {
-            width: 'inherit',
-            height: 'auto',
+            
+            
         }
 
         const dividerStyle = {
@@ -60,16 +61,18 @@ class Landing extends Component {
                         </Anime>
                     </Col>
                     <Col xl={{span: 15, offset: -1}} style={{paddingRight: 0}}>
-                        <Anime opacity={[0,1]} translateX={[500, 0]} delay={2800} duration={500} easing={'linear'}>
+                        <Anime opacity={[0,1]} translateX={[500, 0]} delay={2800} duration={700} easing={'linear'}>
                             <Carousel dotPosition={dotPosition} autoplay style={contentStyle} id="gallery">
+
+                                    <Image  src={me3} preview={false} width={'85%'}></Image>
                                     
-                                    <Image src={petra} style={imgStyle}></Image>
+                                    <Image src={me1} preview={false} width={'85%'}></Image>
                 
-                                    <Image src={himeji} style={imgStyle}></Image>
+                                    <Image  src={me2} preview={false} width={'85%'}></Image>
                             
-                                    <Image src={fasil} style={imgStyle}></Image>
+                                    
                         
-                                    <Image src={hagia} style={imgStyle}></Image>
+    
                             
                             </Carousel>
                         </Anime>

@@ -3,6 +3,9 @@ import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Divider, Carousel, Image } from 'antd';
 import { Parallax } from 'react-scroll-parallax';
+import bg from './assets/img/bg.jpg';
+import flag from './assets/img/flag.JPG'
+import phone from './assets/img/phone.JPG'
 
 
 class Portfolio extends Component {
@@ -19,11 +22,11 @@ class Portfolio extends Component {
                             <a className="portfolio-item" href="#!" >
                                 <div className="caption">
                                     <div className="caption-content">
-                                        <div className="h2">Himeji Castle</div>
+                                        <div className="h2 portfolioText">Buffalo-Gro</div>
                                         <p className="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
                                     </div>
                                 </div>
-                                <img className="img-fluid portfolioImage" src="assets/img/himeji.jpg" alt="..." />
+                                <img className="img-fluid portfolioImage" src={bg} alt="..." />
                             </a>
                         </Col>
                     </Row>
@@ -32,11 +35,11 @@ class Portfolio extends Component {
                             <a className="portfolio-item" href="#!" >
                                 <div className="caption">
                                     <div className="caption-content">
-                                        <div className="h2">Fasilides Castle</div>
+                                        <div className="h2 portfolioText">Flags of Europe</div>
                                         <p className="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
                                     </div>
                                 </div>
-                                <img className="img-fluid portfolioImage" src="assets/img/fasil.jpg" alt="..." />
+                                <img className="img-fluid portfolioImage" src={flag} alt="..." />
                             </a>
                         </Col>
                     </Row>
@@ -45,11 +48,11 @@ class Portfolio extends Component {
                             <a className="portfolio-item" href="#!" >
                                 <div className="caption">
                                     <div className="caption-content">
-                                        <div className="h2">Hagia Sophia</div>
+                                        <div className="h2 portfolioText">GA Voter Informer</div>
                                         <p className="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
                                     </div>
                                 </div>
-                                <img className="img-fluid portfolioImage" src="assets/img/hagia.jpg" alt="..." />
+                                <img className="img-fluid portfolioImage" src={phone} alt="..." />
                             </a>
                         </Col>
                     </Row>
@@ -58,7 +61,7 @@ class Portfolio extends Component {
                             <a className="portfolio-item" href="#!" >
                                 <div className="caption">
                                     <div className="caption-content">
-                                        <div className="h2">Petra</div>
+                                        <div className="h2 portfolioText">Portfolio Website</div>
                                         <p className="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
                                     </div>
                                 </div>

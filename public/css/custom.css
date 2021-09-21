@@ -174,6 +174,7 @@ h2, h1 {
   }
   .form-label.form-label {
     font-family:'Courier New', Courier, monospace;
+    color: var(--bs-fontColor);
   }
 
   .btn.btn {
@@ -199,13 +200,18 @@ h2, h1 {
       color: #FFFFFF !important;
   }
   .dummy {
-
+    
   }
   .resumeContainer {
 
   }
+  .resumeTitle {
+      color: white !important;
+      font-size: 10em;
+      letter-spacing: 0.1em;
+  }
   .parallax-inner.parallax-inner {
-      z-index: 1000;
+      /* z-index: 1000; */
       position: relative;
       /* Needed to prevent z inded from being invalidated by transform */
   }

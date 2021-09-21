@@ -23,35 +23,40 @@ function Backgrounds(props) {
                         backgroundSize: "cover",
                         height: "100vh",
                         width: '100vw',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>
             <div id="bgImage2" style={{
                         backgroundImage: 'url('+bw2+')',
                         backgroundSize: "cover",
                         height: "100vh",
                         width: '100vw',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>  
             <div id="bgImage3" style={{
                         backgroundImage: 'url('+bw3+')',
                         backgroundSize: "cover",
                         height: "100vh",
                         width: '100vw',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div> 
             <div id="bgImage4" style={{
                         backgroundImage: 'url('+bw4+')',
                         backgroundSize: "cover",
                         height: "100vh",
                         width: '100vw',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>      
             <div id="bgImage5" style={{
                         backgroundImage: 'url('+bw5+')',
                         backgroundSize: "cover",
                         height: "100vh",
                         width: '100vw',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>      
             <div id="bgImage6" style={{
                         backgroundImage: 'url('+bw1+')',
@@ -59,7 +64,8 @@ function Backgrounds(props) {
                         height: "100vh",
                         width: '100vw',
                         transform: 'scaleX(-1)',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>     
             <div id="bgImage7" style={{
                         backgroundImage: 'url('+bw3+')',
@@ -67,7 +73,8 @@ function Backgrounds(props) {
                         height: "100vh",
                         width: '100vw',
                         transform: 'scaleX(-1)',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>  
             <div id="bgImage8" style={{
                         backgroundImage: 'url('+bw6+')',
@@ -75,7 +82,8 @@ function Backgrounds(props) {
                         height: "100vh",
                         width: '100vw',
                         transform: 'scaleX(-1)',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>
             <div id="bgImage9" style={{
                         backgroundImage: 'url('+bw7+')',
@@ -83,7 +91,8 @@ function Backgrounds(props) {
                         height: "110vh",
                         width: '100vw',
                         transform: 'scaleX(-1)',
-                        opacity: 'var(--bs-bgOpacityValue)'
+                        opacity: 'var(--bs-bgOpacityValue)',
+                        filter: 'var(--bs-grayscale)'
                         }}></div>  
             {/* <div id="bgImage10" style={{
                         backgroundImage: 'url('+bw2+')',

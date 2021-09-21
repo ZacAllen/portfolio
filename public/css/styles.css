@@ -27,6 +27,8 @@
   --bs-dark: #212529;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-bgOpacityValue: 0.3;
+  --bs-grayscale: grayscale(0%);
+  --bs-resumeSwoop: var(--bs-primaryColor);
 }
 
 *,
