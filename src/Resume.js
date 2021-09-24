@@ -13,6 +13,7 @@ import lifecycle from 'react-pure-lifecycle';
 import word from './word.svg';
 import pdf from './pdf.svg';
 import resumePDF from './myResume.pdf';
+import resumeWord from './myResume.docx';
 
 
 function Resume (props) {
@@ -24,8 +25,6 @@ function Resume (props) {
     const [resumeDoc, setDiv6] = useState(null);
     const [contact, setDiv7] = useState(null);
 
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
 
     var canPlay = true;
     var firstPlay = 0;
@@ -267,6 +266,28 @@ function Resume (props) {
             width: '100%',
             height: '99%'
         }
+        const wordOrPdfStyle = {
+            height: '50%', 
+            width: '50%'
+        }
+        const selectFileTypeWord = () => {
+            let word = document.getElementById('word');
+            let pdf = document.getElementById('pdf');
+            let downloadButton = document.getElementById('dlbutton')
+            word.className = 'fileTypeActive';
+            pdf.className = "";
+            downloadButton.href = resumeWord;
+           
+        }
+        const selectFileTypePdf = () => {
+            let word = document.getElementById('word');
+            let pdf = document.getElementById('pdf');
+            let downloadButton = document.getElementById('dlbutton')
+            pdf.className = 'fileTypeActive';
+            word.className = "";
+            downloadButton.href = resumePDF;
+           
+        }
 
         return (
             <div>
@@ -288,16 +309,19 @@ function Resume (props) {
                                     <Row>
                                         <Col xl={{span: 12}}>
                                         <div>
-                                            <img src={word} style={{height: '50%', width: '50%'}}></img>
+                                            <img id="word" className="fileTypeActive" src={word} style={wordOrPdfStyle} onClick={selectFileTypeWord}></img>
                                         </div>
                                         </Col>
                                         <Col xl={{span: 12}}>
                                         <div>
-                                            <img src={pdf} style={{height: '50%', width: '50%'}}></img>
+                                            <img id="pdf" src={pdf} style={wordOrPdfStyle} onClick={selectFileTypePdf}></img>
                                         </div>
                                         </Col>
                                     </Row>
-                                    <button type="download" className="btn btn-primary DLButton">Download</button>
+                                    <a id = 'dlbutton' href={resumeWord} download="ZAllenResume" target='_blank'>
+                                        <button type="download" className="btn btn-primary DLButton">Download</button>
+                                    </a>
+                                    
                                     <p>Scroll to view</p>
                                     </div>
                                 </div>

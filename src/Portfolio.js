@@ -23,7 +23,7 @@ class Portfolio extends Component {
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Buffalo-Gro</div>
-                                        <p className="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                        <p className="mb-0">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
                                     </div>
                                 </div>
                                 <img className="img-fluid portfolioImage" src={bg} alt="..." />
@@ -36,7 +36,8 @@ class Portfolio extends Component {
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Flags of Europe</div>
-                                        <p className="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                                        <p className="mb-0">An interactive flag map showcasing the evolution of Europe’s national flag designs from 1815 to 2021. Made with HTML5, CSS, 
+                                        JavaScript/jQuery + additional JS libraries.</p>
                                     </div>
                                 </div>
                                 <img className="img-fluid portfolioImage" src={flag} alt="..." />
@@ -49,7 +50,8 @@ class Portfolio extends Component {
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">GA Voter Informer</div>
-                                        <p className="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                                        <p className="mb-0">An interactive mobile app prototype meant to motivate people to take action and rebuild communities through 
+                                        the voting process</p>
                                     </div>
                                 </div>
                                 <img className="img-fluid portfolioImage" src={phone} alt="..." />
@@ -62,7 +64,7 @@ class Portfolio extends Component {
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Portfolio Website</div>
-                                        <p className="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                                        <p className="mb-0">Temp Text Temp TextTemp TextTemp TextTemp TextTemp Text</p>
                                     </div>
                                 </div>
                                 <img className="img-fluid portfolioImage" src="assets/img/petra.jpg" alt="..." />
