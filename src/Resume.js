@@ -10,25 +10,41 @@ import { Container } from "react-bootstrap";
 import Anime from 'react-anime';
 import anime from "animejs/lib/anime.es.js";
 import lifecycle from 'react-pure-lifecycle';
-
-// var coordinates = document.getElementById('firstSection').getBoundingClientRect();
-//         console.log(coordinates.top)
+import word from './word.svg';
+import pdf from './pdf.svg';
+import resumePDF from './myResume.pdf';
 
 
 function Resume (props) {
     const [resumeDiv, setDiv1] = useState(null);
     const [navbarDiv, setDiv2] = useState(null);
     const [resumeSticky, setDiv3] = useState(null);
+    const [dummyModal, setDiv4] = useState(null);
+    const [modalContents, setDiv5] = useState(null);
+    const [resumeDoc, setDiv6] = useState(null);
+    const [contact, setDiv7] = useState(null);
+
+    const [numPages, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+
+    var canPlay = true;
+    var firstPlay = 0;
 
     useEffect(() => {
         setDiv1(document.getElementById("firstSection"));
         setDiv2(document.getElementById("myNavbar"));
         setDiv3(document.getElementById('resume'));
+        setDiv4(document.getElementById('dummyModal'));
+        setDiv5(document.getElementById('modalContents'));
+        setDiv6(document.getElementById('resumePDF'))
+        setDiv7(document.getElementById('contactTitle'))
     }, [])
+
 
     const animationRef = React.useRef(null);
     const titleAnimation = React.useRef(null);
     const titleAnimationBottom = React.useRef(null);
+    const resumeAnimation = React.useRef(null);
         React.useEffect(() => {
             animationRef.current = anime ({
                 targets: '.dummy',
@@ -59,9 +75,6 @@ function Resume (props) {
                 duration: 5000,
                 // loop: true
              });
-
-
-             
         }, [])
         React.useEffect(() => {
             titleAnimationBottom.current = anime ({
@@ -73,16 +86,24 @@ function Resume (props) {
                 // opacity: 0.7,
                 duration: 5000,
                 // loop: true
-             });
+             }); 
+        }, [])
 
-
-             
+        React.useEffect(() => {
+            resumeAnimation.current = anime ({
+                targets: '#resumePDF',
+                opacity: [0, 1],
+                scale: [0, 1],
+                // elasticity: 200,
+                easing: 'linear',
+                autoplay: false,
+                // opacity: 0.7,
+                duration: 1000,
+                // loop: true
+             }); 
         }, [])
 
 
-        /**
-     * Calculate the scroll percentage position
-     */
     const scrollPercent = () => {
 
         const bodyST = document.body.scrollTop;
@@ -95,6 +116,7 @@ function Resume (props) {
 
     }
 
+    //This method sourced from https://stackoverflow.com/a/60455358
     const getPercentOfView = (element) =>{
         const viewTop = window.pageYOffset;
         const viewBottom = viewTop + window.innerHeight;
@@ -129,7 +151,7 @@ function Resume (props) {
         var rect2 = div2.getBoundingClientRect();
 
         if (rect1.top <= rect2.bottom) {
-            console.log("TOUCHING!!!");
+            // console.log("TOUCHING!!!");
             return true;
         }
     }
@@ -138,7 +160,43 @@ function Resume (props) {
      * control animations based on scroll percentage.
      */
     window.onscroll = () => {
-        console.log(getPercentOfView(resumeDiv))
+        var modalScale = dummyModal.style.transform;
+        var modalScaleX = modalScale.substring(modalScale.indexOf('(') + 1, modalScale.indexOf(')'));
+        console.log(modalScaleX);
+        
+        // Gotta do this to prevent that weird shadow DOM covering existing elements thing wtf
+        if (resumeDoc.style.transform.includes('scale(0)')) {
+            resumeDoc.style.display = 'none';
+        } else {
+            resumeDoc.style.display = 'flex';
+        }
+        
+        var seekPercent = ((scrollPercent() / 100) * resumeAnimation.current.duration) - resumeAnimation.current.duration*.6;
+        // console.log(seekPercent);
+        if (seekPercent >= 120 && canPlay) {
+                // Must re-reverse after first play because reverse() reverses the animation's entire state permanently until reversed once again
+                if (firstPlay != 0) {
+                    resumeAnimation.current.reverse();
+                } 
+                resumeAnimation.current.play();
+                firstPlay = 1;
+                canPlay = false;
+            
+        } else if (seekPercent < 120 && !canPlay) {
+       
+                resumeAnimation.current.reverse();
+                resumeAnimation.current.play();
+                canPlay = true;
+            
+        }
+        //When modal is too large fade away contents
+        if (modalScaleX > 3) {
+            modalContents.style.display = 'none'
+        } else {
+            modalContents.style.display = 'block'
+        }
+
+        // Scroll controlled animation of resume download modal
         if (touches(resumeDiv, navbarDiv)  && getPercentOfView(resumeDiv) >= 85) {
             animationRef.current.seek(((scrollPercent() / 100) * animationRef.current.duration) - animationRef.current.duration*.6);
             titleAnimation.current.seek(((scrollPercent() / 100) * titleAnimation.current.duration) - titleAnimation.current.duration*.6);
@@ -146,27 +204,28 @@ function Resume (props) {
 
         } else if (touches(resumeDiv, navbarDiv) && getPercentOfView(resumeDiv) < 100) {
             animationRef.current.seek((getPercentOfView(resumeDiv) / 100) * animationRef.current.duration)
-            console.log((getPercentOfView(resumeDiv) / 100) * animationRef.current.duration)
 
         } else if (!touches(resumeDiv, navbarDiv)) {
             animationRef.current.seek(0)
         }
-
     };
 
         const DummyModalStyle = {
-            width: '350px',
-            height: '350px',
+            // width: '350px',
+            // height: '350px',
+            width: '18%',
+            height: '33%',
             backgroundColor: 'var(--bs-resumeSwoop)',
             // border: '2px solid var(--bs-primaryColor)',
             position: 'absolute',  
-            zIndex: 1000,
+            // zIndex: 1000,
+            textAlign: 'center',
             // borderRadius: '50%',
         };
         const ContainerStyle = {
             backgroundColor:"#000000", 
             width: "100vw", 
-            height: "300vh",
+            height: "500vh",
             position: 'relative',
             display: 'flex',
             // opacity: 0.9
@@ -197,7 +256,17 @@ function Resume (props) {
             right: '5%',
             bottom: '10%'
         }
-        
+        const pdfContainerStyle = {
+            backgroundColor: 'black',
+            width: '50%',
+            height: '60%',
+            position: 'absolute',
+            paddingBottom: 0,
+        }
+        const resumePDFStyle = {
+            width: '100%',
+            height: '99%'
+        }
 
         return (
             <div>
@@ -212,9 +281,30 @@ function Resume (props) {
                                 <div style={titleStyleTop}>
                                     <h1 id="resumeTitleTop" className="resumeTitle">MY RESUME</h1>
                                 </div>
+                                {/* MODAL */}
                                 <div id="dummyModal"className="dummy" style={DummyModalStyle}>
-                                    <h3 className="downloadMyResume"></h3>
+                                    <div id="modalContents">
+                                    <h3 className="downloadMyResume">File Type</h3>
+                                    <Row>
+                                        <Col xl={{span: 12}}>
+                                        <div>
+                                            <img src={word} style={{height: '50%', width: '50%'}}></img>
+                                        </div>
+                                        </Col>
+                                        <Col xl={{span: 12}}>
+                                        <div>
+                                            <img src={pdf} style={{height: '50%', width: '50%'}}></img>
+                                        </div>
+                                        </Col>
+                                    </Row>
+                                    <button type="download" className="btn btn-primary DLButton">Download</button>
+                                    <p>Scroll to view</p>
+                                    </div>
                                 </div>
+                                {/* RESUME IFRAME */}
+                                <div id="resumePDF" style={pdfContainerStyle}>
+                                    <embed  src={resumePDF}  style={resumePDFStyle}/> 
+                                    </div>
                                 <div style={titleStyleBottom}>
                                     <h1 id="resumeTitleBottom" className="resumeTitle">MY RESUME</h1>
                                 </div>

@@ -197,7 +197,12 @@ h2, h1 {
     /* z-index: 1000; */
   }
   .downloadMyResume {
-      color: #FFFFFF !important;
+      color: #000000 !important;
+      padding: 5%;
+  }
+  .DLButton {
+      margin-top: 5%;
+      margin-bottom: 5%;
   }
   .dummy {
     
