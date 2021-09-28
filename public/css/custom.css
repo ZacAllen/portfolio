@@ -36,7 +36,20 @@
 body {
     background-color: var(--bs-primaryColor) !important;
     overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
+@media screen and (max-width: 500px) {
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100vw;
+    }
+}
+#root {
+    /* overflow-x: hidden; */
+}
+
 .navbar-nav > li {
     margin-left: 10px;
     margin-right: 10px;
@@ -63,10 +76,22 @@ body {
     font-weight: normal;
     font-size: 1em;
 }
+#aboutParagraph {
+    /* padding-top: 5%; */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    color: var(--bs-fontColor);
+    font-family: 'Montserrat', sans-serif;
+}
+
 .skillsText {
-    font-size: 4rem;
-    font-weight: 800;
-    display: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5em;
+}
+@media screen and (max-width: 500px) {
+    .skillsText {
+        font-size: 2em;
+    }
+
 }
 .skillsText .letter {
     display: inline-block;
@@ -104,6 +129,12 @@ body {
     word-wrap:break-word;
     letter-spacing: 5px;
 }
+@media screen and (max-width: 500px) {
+    #myProjects {
+        font-size: 4em;
+    }
+
+}
 .portfolioImage {
     /* border-radius: 10px; */
     /* box-shadow:  3px 3px 1px grey; */
@@ -113,6 +144,9 @@ body {
 .portfolio-item.portfolio-item {
     
 }
+.captionMobile {
+    font-size: 0.8em !important;
+}
 h3 {
     font-family: 'Montserrat', sans-serif;
     color: var(--bs-fontColor) !important;
@@ -121,16 +155,16 @@ h2, h1 {
     font-family: 'Bebas Neue', cursive;
     color: var(--bs-fontColor) !important;
 }
+.skills {
+    font-family: 'Bebas Neue', cursive;
+}
 
 #homeTitle {
     font-weight: 300 !important;
 }
 @media screen and (max-width: 600px) {
     .typewriter {
-        font-size: 2px;
-    }
-    .skillsText {
-        font-size: 6vh;
+        font-size: 2em;
     }
 }
 .typewriter {
@@ -216,11 +250,27 @@ h2, h1 {
   .resumeContainer {
 
   }
+  @media screen and (max-width: 500px) {
+      #resumeSection {
+          padding: 0
+      }
+  }
   .resumeTitle {
       color: white !important;
       font-size: 10em;
       letter-spacing: 0.1em;
   }
+  @media screen and (max-width: 500px) {
+    .resumeTitle {
+        font-size: 5em; 
+    }
+    .lastBGImage {
+        display: none;
+    }
+    .secondToLastBGImage {
+        height: 70vh; /*What have I done!?*/
+    }
+}
   .fileTypeActive {
     border: 2px solid rgb(0, 0, 0);
     padding: 2px;

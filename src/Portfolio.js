@@ -12,27 +12,25 @@ class Portfolio extends Component {
     render() {
         return (
       <div>
-          <div className="">
-          </div>
           {/* <div className="PortfolioGallery"> */}
            <Row gutter={[40, 16]}>
-               <Col xl={{span: 13, offset: 1}}>
+               <Col xl={{span: 13, offset: 1}} xs ={0}>
                     <Row style={{marginBottom: '5%'}}>
                         <Col xl={{span: 23}}>
-                            <a className="portfolio-item" href="#!" >
+                            <a className="portfolio-item" href="https://zakadamia.itch.io/buffalogro" target="_blank">
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Buffalo-Gro</div>
                                         <p className="mb-0">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
                                     </div>
                                 </div>
-                                <img className="img-fluid portfolioImage" src={bg} alt="..." />
+                                <img className="img-fluid portfolioImage" src={bg} alt="..."/>
                             </a>
                         </Col>
                     </Row>
                     <Row style={{marginBottom: '5%'}}>
                         <Col xl={{span: 23}}>
-                            <a className="portfolio-item" href="#!" >
+                            <a className="portfolio-item" href="https://github.com/ZacAllen/flags-of-europe" target="_blank" >
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Flags of Europe</div>
@@ -46,7 +44,7 @@ class Portfolio extends Component {
                     </Row>
                     <Row style={{marginBottom: '5%'}}>
                         <Col xl={{span: 23}}>
-                            <a className="portfolio-item" href="#!" >
+                            <a className="portfolio-item" href="https://zachallen.myportfolio.com/voter-informer" target="_blank">
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">GA Voter Informer</div>
@@ -60,7 +58,7 @@ class Portfolio extends Component {
                     </Row>
                     <Row>
                         <Col xl={{span: 23}}>
-                            <a className="portfolio-item" href="#!" >
+                            <a className="portfolio-item" href="https://github.com/ZacAllen/portfolio" target="_blank" >
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Portfolio Website</div>
@@ -73,7 +71,7 @@ class Portfolio extends Component {
                     </Row>
                </Col>
                
-               <Col className ="portfolioColumn" xl={{span: 9, }}>
+               <Col className ="portfolioColumn" xl={{span: 9, }} xs={0}>
                     <div className="content-section-heading PortfolioTitle">
                         <div style={{padding: '10px'}}>
                             <h3 id = "portfolio" className="text-secondary mb-0">Portfolio</h3>
@@ -82,6 +80,73 @@ class Portfolio extends Component {
                             
                     </div>
                </Col>
+            {/* --------------------------------------------------------------------------------MOBILE------------------------------------------------------------------- */}
+                <Col xl={0} xs ={{span: 22, offset: 1}}>
+                    <Row>
+                        <Col>
+                            <div className="content-section-heading PortfolioTitle">
+                                <div>
+                                    <h3 id = "portfolio" className="text-secondary mb-0">Portfolio</h3>
+                                    <h1 id = "myProjects" className="mb-5">MY PROJECTS</h1>
+                                </div>           
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <a className="portfolio-item" href="https://zakadamia.itch.io/buffalogro" target="_blank">
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">Buffalo-Gro</div>
+                                        <p className="mb-0 captionMobile">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src={bg} alt="..."/>
+                            </a>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <a className="portfolio-item" href="https://github.com/ZacAllen/flags-of-europe" target="_blank" >
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">Flags of Europe</div>
+                                        <p className="mb-0 captionMobile">An interactive flag map showcasing the evolution of Europe’s national flag designs from 1815 to 2021. Made with HTML5, CSS, 
+                                        JavaScript/jQuery + additional JS libraries.</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src={flag} alt="..." />
+                            </a>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <a className="portfolio-item" href="https://zachallen.myportfolio.com/voter-informer" target="_blank">
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">GA Voter Informer</div>
+                                        <p className="mb-0 captionMobile">An interactive mobile app prototype meant to motivate people to take action and rebuild communities through 
+                                        the voting process</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src={phone} alt="..." />
+                            </a>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <a className="portfolio-item" href="https://github.com/ZacAllen/portfolio" target="_blank" >
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">Portfolio Website</div>
+                                        <p className="mb-0 captionMobile">Temp Text Temp TextTemp TextTemp TextTemp TextTemp Text</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src="assets/img/petra.jpg" alt="..." />
+                            </a>
+                        </Col>
+                    </Row>
+                </Col>
 
             </Row>      
       </div>

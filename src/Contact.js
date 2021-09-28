@@ -20,8 +20,8 @@ function Contact(props) {
         <div className="container px-4 px-lg-5 text-center">
             <h2 id = "contactTitle" className="mb-4">Get In Touch With Me</h2>
             <div className="row">
-                <div className="col"></div>
-                <div className="col-8">
+                <div className="col-lg-2 col-sm-1"></div>
+                <div className="col-lg-8 col-sm-10">
                     <form className = "contact-form" id = "emailForm" onSubmit={sendEmail}>
                         
                           <label className="form-label">Your Name</label>
@@ -39,7 +39,7 @@ function Contact(props) {
                     </form>
         
                 </div>
-                <div className="col"></div>
+                <div className="col-lg-2 col-sm-1"></div>
             </div>
         </div>
     )

@@ -76,7 +76,7 @@ function Backgrounds(props) {
                         opacity: 'var(--bs-bgOpacityValue)',
                         filter: 'var(--bs-grayscale)'
                         }}></div>  
-            <div id="bgImage8" style={{
+            <div id="bgImage8" className = "secondToLastBGImage" style={{
                         backgroundImage: 'url('+bw6+')',
                         backgroundSize: "cover",
                         height: "100vh",
@@ -85,7 +85,7 @@ function Backgrounds(props) {
                         opacity: 'var(--bs-bgOpacityValue)',
                         filter: 'var(--bs-grayscale)'
                         }}></div>
-            <div id="bgImage9" style={{
+            <div id="bgImage9" className = "lastBGImage" style={{
                         backgroundImage: 'url('+bw7+')',
                         backgroundSize: "cover",
                         height: "110vh",

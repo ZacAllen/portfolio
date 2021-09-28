@@ -279,7 +279,7 @@ footer.footer .social-link:hover {
   /* overflow: hidden; */
   max-width: 530px;
   margin: auto auto 1rem;
-  border: 150px solid rgba(0, 0, 0, 0.8);
+  border: 100px solid rgba(0, 0, 0, 0.8);
 }
 .portfolio-item .caption {
   display: flex;
@@ -294,6 +294,7 @@ footer.footer .social-link:hover {
 .portfolio-item .caption .caption-content {
   color: #fff;
   margin: auto 2rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
   font-size: 0.8rem;

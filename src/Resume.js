@@ -289,12 +289,67 @@ function Resume (props) {
            
         }
 
+        //--------------------------------------------------------------------------------------MOBILE STYLES---------------------------------------------------------------------
+        const ContainerStyleMobile = {
+            backgroundColor:"#000000", 
+            width: "100vw", 
+            height: "100vh",
+            position: 'relative',
+            display: 'flex',
+            zIndex: 1
+        }
+        const firstSectionStyleMobile = {
+            width: '100vw',
+            height: '100vh',
+            display: 'flex',
+            // alignItems: 'center',
+            justifyContent: 'center',
+        }
+        const DummyModalStyleMobile = {
+            width: '80%',
+            height: '45%',
+            marginTop: '75%',
+            backgroundColor: 'var(--bs-resumeSwoop)',
+            // border: '2px solid var(--bs-primaryColor)',
+            position: 'relative',  
+            textAlign: 'center',
+        };
+        const selectFileTypeWordMobile = () => {
+            console.log('WORD NOW')
+            let word = document.getElementById('wordMobile');
+            let pdf = document.getElementById('pdfMobile');
+            let downloadButton = document.getElementById('dlbuttonMobile')
+            word.className = 'fileTypeActive';
+            pdf.className = "";
+            downloadButton.href = resumeWord;
+           
+        }
+        const selectFileTypePdfMobile = () => {
+            console.log('PDF NOW')
+            let word = document.getElementById('wordMobile');
+            let pdf = document.getElementById('pdfMobile');
+            let downloadButton = document.getElementById('dlbuttonMobile')
+            pdf.className = 'fileTypeActive';
+            word.className = "";
+            downloadButton.href = resumePDF;
+           
+        }
+
+        const wordOrPdfStyleMobile = {
+            height: '80px', 
+            width: '80px'
+        }
+        const titleStyleTopMobile = {
+            position: 'absolute',
+            left: '5%',
+            top: '2%'
+        }
         return (
             <div>
                 <Row  gutter={[40, 16]} style={paddingContainer}></Row>
                 
                 <Row gutter={[40, 16]} className="vw-100">
-                    <Col xl={{span: 24}}>
+                    <Col xl={{span: 24}} xs={0}>
                     {/* <Parallax className="custom-class" y={[20, -20]}> */}
                    
                         <div id="firstSection" className="resumeContainer" style={ContainerStyle}>
@@ -335,6 +390,37 @@ function Resume (props) {
                             </div> 
                         </div>
                         {/* </Parallax> */}
+                    </Col>
+                    {/* --------------------------------------------------------------------------------MOBILE------------------------------------------------------------------- */}
+                    <Col xl={0} xs={{span: 24}}>
+                        <div id="firstSection" className="resumeContainer" style={ContainerStyleMobile}>
+                            <div id="resume" className="" style={firstSectionStyleMobile}>
+                                <div style={titleStyleTopMobile}>
+                                    <h1 id="resumeTitleTopMobile" className="resumeTitle">MY RESUME</h1>
+                                </div>
+                                {/* MODAL */}
+                                <div id="dummyModal"className="dummyMobile" style={DummyModalStyleMobile}>
+                                    <div id="modalContents" style={{marginTop: '10%'}}>
+                                    <h3 className="downloadMyResume">File Type</h3>
+                                    <Row>
+                                        <Col xs={{span: 12}}>
+                                        <div>
+                                            <img id="wordMobile" className="fileTypeActive" src={word} style={wordOrPdfStyleMobile} onClick={selectFileTypeWordMobile}></img>
+                                        </div>
+                                        </Col>
+                                        <Col xs={{span: 12}}>
+                                        <div>
+                                            <img id="pdfMobile" src={pdf} style={wordOrPdfStyleMobile} onClick={selectFileTypePdfMobile}></img>
+                                        </div>
+                                        </Col>
+                                    </Row>
+                                    <a id = 'dlbuttonMobile' href={resumeWord} download="ZAllenResume" target='_blank'>
+                                        <button type="download" className="btn btn-primary DLButton">Download</button>
+                                    </a>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
                     </Col>
                     
                 </Row>

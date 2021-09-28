@@ -26,10 +26,19 @@ class Landing extends Component {
             position: 'relative',
             filter: 'var(--bs-grayscale)'
         };
-        const imgStyle = {
-            
-            
-        }
+        const contentStyleMobile = {
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            backgroundClip: 'padding-box',
+            textAlign:'center',
+            width: '100%',
+            // height: '75vh',
+            border: '5vh solid rgba(0, 0, 0, .8)',
+            // display:'flex',
+            alignItems: 'center',
+            justifyContent:'center',
+            position: 'relative',
+            filter: 'var(--bs-grayscale)'
+        };
 
         const dividerStyle = {
             borderTop: '1px solid #000000'
@@ -42,16 +51,19 @@ class Landing extends Component {
         return (
             <div className='LandingComponent'>
                 <Row gutter={[40, 16]}>
-                    <Col xl={{span: 7, offset: 1}}>
+                    <Col xl={{span: 7, offset: 1}} xs={0}>
                         <h3 className="typewriter" id="title">Hey, I'm Zach Allen!</h3>
+                        <Divider style={dividerStyle}></Divider>
                         <Anime opacity={[0, 1]} translateY={[800, 0]} delay={2800} duration={1000} easing={'linear'}>
                             <div id="aboutContent">
+                                <div id ="aboutParagraph">
+                                    <p>I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
+                                        Media with concentrations in Interaction Design & Experimental Media.</p>
+                                    <p>My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
+                                    <p>In my free time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
+                                </div>
                                 <Divider style={dividerStyle}></Divider>
-                                <h3 className="aboutText">Recent Georgia Tech Grad - Computational Media</h3>
-                                <Divider style={dividerStyle}></Divider>
-                                <h3 className="aboutText">Concentrations - Interactive Design & Experimental Media</h3>
-                                <Divider style={dividerStyle}></Divider>
-                                <h3 className="aboutText">Languages - Java, JavaScript, jQuery, HTML/CSS, C, C#, Java Processing + p5.js</h3>
+                                <h3 className="aboutText"><span className="skillsText">Languages</span> - Java, JavaScript, jQuery, HTML/CSS, C, C#, Java Processing + p5.js</h3>
                                 <Divider style={dividerStyle}></Divider>
                                 <h3 className="aboutText">Tools - Git, WordPress, Bootstrap, Firebase, React, Node.js</h3>
                                 <Divider style={dividerStyle}></Divider>
@@ -60,28 +72,59 @@ class Landing extends Component {
                             </div>
                         </Anime>
                     </Col>
-                    <Col xl={{span: 15, offset: -1}} style={{paddingRight: 0}}>
+                    <Col xl={{span: 15, offset: -1}} style={{paddingRight: 0}} xs={0}>
                         <Anime opacity={[0,1]} translateX={[500, 0]} delay={2800} duration={700} easing={'linear'}>
                             <Carousel dotPosition={dotPosition} autoplay style={contentStyle} id="gallery">
-
                                     <Image  src={me3} preview={false} width={'85%'}></Image>
                                     
                                     <Image src={me1} preview={false} width={'85%'}></Image>
                 
                                     <Image  src={me2} preview={false} width={'85%'}></Image>
-                            
-                                    
-                        
-    
-                            
                             </Carousel>
                         </Anime>
-                    </Col>
+                    </Col> 
                 </Row>
-                {/* <Button type="primary" style={{ marginLeft: 8 }}>
-                    Primary Button
-                </Button> */}
 
+
+                 {/* --------------------------------------------------------------------------------MOBILE------------------------------------------------------------------- */}
+                 <Row style={{width: '100vw'}}> {/*Not sure why specified width needed but it works for now */}
+                    <Col xl={0} xs={{span: 22, offset: 1}}>
+                            <h3 className="typewriter" id="title">Hey, I'm Zach Allen!</h3>
+                            <Divider style={dividerStyle}></Divider>
+                            <Anime opacity={[0, 1]} translateY={[800, 0]} delay={2800} duration={1000} easing={'linear'}>
+                                <div id="aboutContent">
+                                    <div id ="aboutParagraph">
+                                        <p className="skillsText">I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
+                                            Media with concentrations in Interaction Design & Experimental Media.</p>
+                                        <p>My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
+                                        <p>In my free time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
+                                    </div>
+                                    <Divider style={dividerStyle}></Divider>
+                                    <h3 className="aboutText">Languages - Java, JavaScript, jQuery, HTML/CSS, C, C#, Java Processing + p5.js</h3>
+                                    <Divider style={dividerStyle}></Divider>
+                                    <h3 className="aboutText">Tools - Git, WordPress, Bootstrap, Firebase, React, Node.js</h3>
+                                    <Divider style={dividerStyle}></Divider>
+                                    <h3 className="aboutText">Skills - Information Design & Visualization, Interaction Design, Graphic Design </h3>
+                                    <Divider style={dividerStyle}></Divider>
+                                </div>
+                            </Anime>
+                    </Col>
+                 </Row>
+                 <Row style={{width: '100vw'}}>
+                    <Col xl={0} style={{paddingRight: 0}} xs={{span: 22, offset: 1}}>
+                        <Anime opacity={[0,1]} translateX={[500, 0]} delay={2800} duration={700} easing={'linear'}>
+                            <Carousel dotPosition={dotPosition} autoplay style={contentStyleMobile} id="gallery">
+                                    <Image  src={me3} preview={false} width={'100%'}></Image>
+                                    
+                                    <Image src={me1} preview={false} width={'100%'}></Image>
+                
+                                    <Image  src={me2} preview={false} width={'100%'}></Image>
+                            </Carousel>
+                        </Anime>
+                    </Col> 
+                 </Row>
+                
+                
             </div>
         )
     }
