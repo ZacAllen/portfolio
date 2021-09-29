@@ -1,6 +1,6 @@
 .navbar.navbar {
     background-color: var(--bs-primaryColor);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--bs-mediumFont);
     font-size: 0.8em;
     padding-top: 20px;
     box-shadow: 0 5px 6px -7px #000000;
@@ -12,6 +12,12 @@
     max-width: 91vw !important;
     /* filter: drop-shadow(0px 3px 3px black); */
     box-shadow: 0 5px 6px -7px #000000;
+}
+#menuTitle {
+    font-family: var(--bs-bigFont); 
+    font-size: 1.5em;
+    color: var(--bs-fontColor);
+    text-decoration: none;
 }
 .darkMode {
     margin-left: 10vw;
@@ -38,6 +44,9 @@ body {
     overflow-x: hidden;
     position: relative;
     width: 100%;
+}
+html {
+    scroll-behavior: smooth;
 }
 @media screen and (max-width: 500px) {
     html, body {
@@ -72,7 +81,7 @@ body {
     background-color: thistle !important;
 }
 .aboutText {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--bs-mediumFont);
     font-weight: normal;
     font-size: 1em;
 }
@@ -80,11 +89,11 @@ body {
     /* padding-top: 5%; */
     /* background-color: rgba(0, 0, 0, 0.6); */
     color: var(--bs-fontColor);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--bs-mediumFont);
 }
 
 .skillsText {
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--bs-bigFont); 
     font-size: 1.5em;
 }
 @media screen and (max-width: 500px) {
@@ -148,27 +157,29 @@ body {
     font-size: 0.8em !important;
 }
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--bs-mediumFont);
     color: var(--bs-fontColor) !important;
 }
 h2, h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--bs-bigFont); 
     color: var(--bs-fontColor) !important;
 }
 .skills {
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--bs-bigFont); 
 }
 
 #homeTitle {
     font-weight: 300 !important;
 }
-@media screen and (max-width: 600px) {
-    .typewriter {
-        font-size: 2em;
+@media screen and (max-width: 500px) {
+    .typewriter.typewriter {
+        font-size: 1.5em;
+        font-family: var(--bs-mediumFont);
+        font-weight: 300;
     }
 }
 .typewriter {
-    font-family: 'Bebas Neue', cursive; /*'Montserrat', sans-serif;*/
+    font-family: var(--bs-bigFont); /*'Montserrat', sans-serif;*/
     font-weight: 800;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
@@ -248,7 +259,7 @@ h2, h1 {
     
   }
   .resumeContainer {
-
+    scroll-margin-top: 3.5em;
   }
   @media screen and (max-width: 500px) {
       #resumeSection {
@@ -279,4 +290,8 @@ h2, h1 {
       /* z-index: 1000; */
       position: relative;
       /* Needed to prevent z inded from being invalidated by transform */
+  }
+
+  #name, #email, #message {
+      color: var(--bs-fontColor);
   }

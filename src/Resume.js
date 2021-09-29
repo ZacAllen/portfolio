@@ -393,7 +393,7 @@ function Resume (props) {
                     </Col>
                     {/* --------------------------------------------------------------------------------MOBILE------------------------------------------------------------------- */}
                     <Col xl={0} xs={{span: 24}}>
-                        <div id="firstSection" className="resumeContainer" style={ContainerStyleMobile}>
+                        <div id="firstSectionMobile" className="resumeContainer" style={ContainerStyleMobile}>
                             <div id="resume" className="" style={firstSectionStyleMobile}>
                                 <div style={titleStyleTopMobile}>
                                     <h1 id="resumeTitleTopMobile" className="resumeTitle">MY RESUME</h1>

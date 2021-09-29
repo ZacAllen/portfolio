@@ -3,11 +3,15 @@ import { Row, Col, Divider, Switch } from 'antd';
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Scrollspy from 'react-scrollspy'
+import { slide as Menu } from 'react-burger-menu'
 
 class Nav extends Component {
+    showSettings (event) {
+        event.preventDefault();
+      }
 
     render() {
-
+        var dark = false;
         const switchDarkMode = (btn) => {
             console.log("TIME FOR DARKNESS!!!")
             let on = document.getElementById('on');
@@ -42,10 +46,46 @@ class Nav extends Component {
             root.style.setProperty('--bs-grayscale', 'grayscale(0%)');
             root.style.setProperty('--bs-resumeSwoop', 'var(--bs-primaryColor)');
         }
+
+        const switchDarkModeMobile = () => {
+            if (!dark) {
+                let on = document.getElementById('on');
+                let off = document.getElementById('off');
+
+                on.className = "buttonActive";
+                    on.style.color = "#FFFFFF";
+                off.className = "buttonInactive";
+
+                let root = document.documentElement;
+                root.style.setProperty('--bs-primaryColor', '#212529');
+                root.style.setProperty('--bs-fontColor', '#FFFFFF');
+                root.style.setProperty('--bs-activeButtonBGColor', '#FFFFFF');
+                root.style.setProperty('--bs-bgOpacityValue', 0.1);
+                root.style.setProperty('--bs-grayscale', 'grayscale(50%)');
+                root.style.setProperty('--bs-resumeSwoop', '#FFFFFF');
+                dark = true;
+            } else {
+                let on = document.getElementById('on');
+                let off = document.getElementById('off');
+
+                off.className = "buttonActive";
+                    // off.style.color = "#FFFFFF";
+                on.className = "buttonInactive";
+
+                let root = document.documentElement;
+                root.style.setProperty('--bs-primaryColor', '#2de664');
+                root.style.setProperty('--bs-fontColor', '#000000');
+                root.style.setProperty('--bs-activeButtonBGColor', '#000000')
+                root.style.setProperty('--bs-bgOpacityValue', 0.3);
+                root.style.setProperty('--bs-grayscale', 'grayscale(0%)');
+                root.style.setProperty('--bs-resumeSwoop', 'var(--bs-primaryColor)');
+                dark = false;
+            }
+        }
             
         return (
             <Row>
-                <Col xl={{span:23,offset:1}}>
+                <Col xl={{span:23,offset:1}} xs = {0}>
                     <div className = 'NavComponent'>
                         <nav  id = "myNavbar" className="navbar navbar-expand-md navbar-dark fixed-top">
                             <div className="container navContainer">
@@ -59,7 +99,7 @@ class Nav extends Component {
                                     <li id="PORTFOLIO" className="nav-item">
                                         <a id="portfoliolink" className="nav-link" href="#portfolio">Portfolio</a>
                                     </li>
-                                    <li id="ABOUT" className="nav-item">
+                                    <li id="RESUME" className="nav-item">
                                         <a id = "aboutlink" className="nav-link" href="#firstSection">Resume</a>
                                     </li>
                                     <li id="CONTACT" className="nav-item">
@@ -77,6 +117,28 @@ class Nav extends Component {
                                     </li>
                                     </Scrollspy>
                             </div>
+                            </div>
+                        </nav>             
+                    </div>
+                </Col>
+                <Col xl={0} xs={{span: 24}}>
+                    <div className = 'NavComponent'>
+                        <Menu right>
+                            <a id="HOME_mobile" className="menu-item" href="#home">Home</a>
+                            <a id="PORTFOLIO_mobile" className="menu-item" href="#portfolio">Portfolio</a>
+                            <a id="RESUME_mobile" className="menu-item" href="#firstSectionMobile">Resume</a>
+                            <a id="CONTACT_mobile" className="menu-item" href="#contact">Contact</a>
+                            <a  className="menu-item" ><span id= "onMobile" className="" onClick={switchDarkModeMobile}>Dark Mode</span></a>
+                            
+                        </Menu>
+                        <nav  id = "myNavbar" className="navbar navbar-expand-sm navbar-dark fixed-top">
+                            <div className="container navContainer">
+                                <a className="navbar-brand abs">Z.ALLEN</a>
+                                
+                                <a className="px-5" id = "menuTitle">Menu</a>
+                               
+                                
+                                
                             </div>
                         </nav>             
                     </div>
