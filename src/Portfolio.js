@@ -20,19 +20,6 @@ class Portfolio extends Component {
                 <ScrollAnimation animateIn="fadeInUp" animatePreScroll={false}>
                         <Row style={{marginBottom: '5%'}}>
                             <Col xl={{span: 23}}>
-                                <a className="portfolio-item" href="https://zakadamia.itch.io/buffalogro" target="_blank">
-                                    <div className="caption">
-                                        <div className="caption-content">
-                                            <div className="h2 portfolioText">Buffalo-Gro</div>
-                                            <p className="mb-0">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
-                                        </div>
-                                    </div>
-                                    <img className="img-fluid portfolioImage" src={bg} alt="..."/>
-                                </a>
-                            </Col>
-                        </Row>
-                        <Row style={{marginBottom: '5%'}}>
-                            <Col xl={{span: 23}}>
                                 <a className="portfolio-item" href="https://github.com/ZacAllen/flags-of-europe" target="_blank" >
                                     <div className="caption">
                                         <div className="caption-content">
@@ -42,6 +29,19 @@ class Portfolio extends Component {
                                         </div>
                                     </div>
                                     <img className="img-fluid portfolioImage" src={flag} alt="..." />
+                                </a>
+                            </Col>
+                        </Row>
+                        <Row style={{marginBottom: '5%'}}>
+                            <Col xl={{span: 23}}>
+                                <a className="portfolio-item" href="https://zakadamia.itch.io/buffalogro" target="_blank">
+                                    <div className="caption">
+                                        <div className="caption-content">
+                                            <div className="h2 portfolioText">Buffalo-Gro</div>
+                                            <p className="mb-0">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
+                                        </div>
+                                    </div>
+                                    <img className="img-fluid portfolioImage" src={bg} alt="..."/>
                                 </a>
                             </Col>
                         </Row>
@@ -102,19 +102,6 @@ class Portfolio extends Component {
                     </Row>
                     <Row>
                         <Col>
-                            <a className="portfolio-item" href="https://zakadamia.itch.io/buffalogro" target="_blank">
-                                <div className="caption">
-                                    <div className="caption-content">
-                                        <div className="h2 portfolioText">Buffalo-Gro</div>
-                                        <p className="mb-0 captionMobile">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
-                                    </div>
-                                </div>
-                                <img className="img-fluid portfolioImage" src={bg} alt="..."/>
-                            </a>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
                             <a className="portfolio-item" href="https://github.com/ZacAllen/flags-of-europe" target="_blank" >
                                 <div className="caption">
                                     <div className="caption-content">
@@ -124,6 +111,19 @@ class Portfolio extends Component {
                                     </div>
                                 </div>
                                 <img className="img-fluid portfolioImage" src={flag} alt="..." />
+                            </a>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <a className="portfolio-item" href="https://zakadamia.itch.io/buffalogro" target="_blank">
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">Buffalo-Gro</div>
+                                        <p className="mb-0 captionMobile">A GameBoy Advance pet-raising simulator and racing game created in C with assets partially drawn in Usenti.</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src={bg} alt="..."/>
                             </a>
                         </Col>
                     </Row>
