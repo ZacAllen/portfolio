@@ -1,0 +1,315 @@
+.navbar.navbar {
+    background-color: var(--bs-primaryColor);
+    font-family: var(--bs-mediumFont);
+    font-size: 0.8em;
+    padding-top: 20px;
+    box-shadow: 0 5px 6px -7px #000000;
+    /* padding-bottom: 0; */
+    
+}
+.navContainer {
+    /* border-bottom: 2px solid black; */
+    max-width: 91vw !important;
+    /* filter: drop-shadow(0px 3px 3px black); */
+    box-shadow: 0 5px 6px -7px #000000;
+}
+#menuTitle {
+    font-family: var(--bs-bigFont); 
+    font-size: 1.5em;
+    color: var(--bs-fontColor);
+    text-decoration: none;
+}
+.darkMode {
+    margin-left: 10vw;
+}
+.buttonActive {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 500px;  
+    padding: 5px 10px 5px 10px;
+    color: var(--bs-primaryColor);
+}
+.modeContainer {
+    margin: 0 !important;
+}
+.buttonInactive {
+    background-color: none;
+    border: 2px solid black;
+    border-radius: 500px;  
+    padding: 5px 10px 5px 10px;
+    color: var(--bs-fontColor)
+}
+body {
+    background-color: var(--bs-primaryColor) !important;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media screen and (max-width: 500px) {
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100vw;
+    }
+}
+#root {
+    /* overflow-x: hidden; */
+}
+
+.navbar-nav > li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#myNavbar {
+    z-index: 2 !important;
+    /* background-image: url('http://localhost:3000/static/media/wall1.e5d1abff.jpg'); */
+    /* background: inherit; */
+}
+#myNavbar .nav-link {
+    color: var(--bs-fontColor);
+}
+#myNavbar .navbar-nav li.active > a {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: var(--bs-activeButtonBGColor);
+    /* border-radius: 50px; */
+    color: var(--bs-primaryColor);
+}
+.mywork:hover {
+    background-color: thistle !important;
+}
+.aboutText {
+    font-family: var(--bs-mediumFont);
+    font-weight: normal;
+    font-size: 1em;
+}
+#aboutParagraph {
+    /* padding-top: 5%; */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    color: var(--bs-fontColor);
+    font-family: var(--bs-mediumFont);
+}
+
+.skillsText {
+    font-family: var(--bs-bigFont); 
+    font-size: 1.5em;
+}
+@media screen and (max-width: 500px) {
+    .skillsText {
+        font-size: 2em;
+    }
+
+}
+.skillsText .letter {
+    display: inline-block;
+}
+@media screen and (min-width: 720px) {
+    #title {
+        letter-spacing: 0.3em;
+        color: gray !important;
+    }
+}
+
+#landingTitleWrapper {
+    padding: 5% 0 10% 0;
+}
+.aboutTitle {
+    font-family: var(--bs-bigFont); 
+    font-size: 2.5em;
+}
+.freeTime {
+    font-size: 1.5em;
+    color: gray !important;
+}
+#about {
+    /* background-color: white; */
+}
+.portPadding {
+    /* padding-top: 5em; */
+    position: sticky !important;
+    top: 200px;
+}
+.PortfolioTitle {
+    position: sticky !important;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    top: 120px;
+    /* background-color: var(--bs-primaryColor); */
+}
+.portfolioColumn {
+    /* background: repeating-linear-gradient(
+        135deg,
+        rgba(0,0,0, 0.8),
+        rgba(0,0,0, 0.8) 50px,
+        rgba(0,0,0, 0.0) 50px,
+        rgba(0,0,0, 0.0) 60px
+    ) */
+}
+#portfolio {
+    font-size: 1em;
+    /* font-weight: 800; */
+}
+#myProjects {
+    font-size: 8em;
+    word-wrap:break-word;
+    letter-spacing: 5px;
+}
+@media screen and (max-width: 500px) {
+    #myProjects {
+        font-size: 4em;
+    }
+
+}
+.portfolioImage {
+    /* border-radius: 10px; */
+    /* box-shadow:  3px 3px 1px grey; */
+    width: 100%;
+    border: 10% solid black;
+}
+.portfolio-item.portfolio-item {
+    
+}
+.captionMobile {
+    font-size: 0.8em !important;
+}
+h3 {
+    font-family: var(--bs-mediumFont);
+    color: var(--bs-fontColor) !important;
+}
+h2, h1 {
+    font-family: var(--bs-bigFont); 
+    color: var(--bs-fontColor) !important;
+}
+.skills {
+    font-family: var(--bs-bigFont); 
+}
+
+#homeTitle {
+    font-weight: 300 !important;
+}
+@media screen and (max-width: 500px) {
+    .typewriter.typewriter {
+        font-size: 1.5em;
+        font-family: var(--bs-mediumFont);
+        font-weight: 300;
+    }
+}
+.typewriter {
+    font-family: var(--bs-bigFont); /*'Montserrat', sans-serif;*/
+    font-weight: 800;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid rgb(0, 0, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(30, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0); }
+  }
+
+  /* Double class trumps single class, better than making everything !important! */
+  .form-control.form-control {
+      /* border: none; */
+      border-radius: 0;
+      /* background-color: rgba(255, 230, 162, 0.411); */
+      border-top: none;
+      border-right: none;
+      border-left: 3px solid rgb(0, 0, 0);
+      border-bottom: 3px solid rgb(0, 0, 0);
+      background-color: transparent !important;
+  }
+  .form-control.form-control:focus {
+      border-color: #85f875;
+  }
+  .form-label.form-label {
+    font-family:'Courier New', Courier, monospace;
+    color: var(--bs-fontColor);
+  }
+
+  .btn.btn {
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 0.2em;
+    border-radius: 0;
+    border:none; 
+    background-color: rgb(0, 0, 0);
+    transition: 0;
+  }
+  .btn.btn:hover, .btn.btn:focus {
+    background-color: var(--bs-hoverColor);
+    outline: none;
+    box-shadow: none;
+  }
+
+
+  #yourName {
+    
+  }
+
+  .Resume {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    /* height: 300vh; */
+    /* z-index: 1000; */
+  }
+  .downloadMyResume {
+      color: #000000 !important;
+      padding: 5%;
+  }
+  .DLButton {
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+  .dummy {
+    
+  }
+  .resumeContainer {
+    scroll-margin-top: 3.5em;
+  }
+  @media screen and (max-width: 500px) {
+      #resumeSection {
+          padding: 0
+      }
+  }
+  .resumeTitle {
+      color: white !important;
+      font-size: 10em;
+      letter-spacing: 0.1em;
+  }
+  @media screen and (max-width: 500px) {
+    .resumeTitle {
+        font-size: 5em; 
+    }
+    .lastBGImage {
+        display: none;
+    }
+    .secondToLastBGImage {
+        height: 70vh; /*What have I done!?*/
+    }
+}
+  .fileTypeActive {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 2px;
+  }
+  .parallax-inner.parallax-inner {
+      /* z-index: 1000; */
+      position: relative;
+      /* Needed to prevent z inded from being invalidated by transform */
+  }
+
+  #name, #email, #message {
+      color: var(--bs-fontColor);
+  }

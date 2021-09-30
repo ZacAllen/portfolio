@@ -1,0 +1,12 @@
+.swal-overlay {
+    background-color: rgba(40, 107, 77, 0.3);
+}
+.swal-button {
+    background-color: var(--bs-hoverColor);
+    font-size: 12px;
+    border-radius: 0;
+}
+.swal-modal {
+    border-radius: 0;
+    box-shadow: 10px 8px black;
+  }
