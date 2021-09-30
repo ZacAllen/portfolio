@@ -65,7 +65,7 @@ class Portfolio extends Component {
                                     <div className="caption">
                                         <div className="caption-content">
                                             <div className="h2 portfolioText">Portfolio Website</div>
-                                            <p className="mb-0">This website, made from scratch with ReactJS and hosted with ---.</p>
+                                            <p className="mb-0">This website, made from scratch with ReactJS and hosted with Netlify.</p>
                                         </div>
                                     </div>
                                     <img className="img-fluid portfolioImage" src={portsnip} alt="..." />
@@ -147,7 +147,7 @@ class Portfolio extends Component {
                                 <div className="caption">
                                     <div className="caption-content">
                                         <div className="h2 portfolioText">Portfolio Website</div>
-                                        <p className="mb-0 captionMobile">This website, made from scratch with ReactJS and hosted with ---.</p>
+                                        <p className="mb-0 captionMobile">This website, made from scratch with ReactJS and hosted with Netlify.</p>
                                     </div>
                                 </div>
                                 <img className="img-fluid portfolioImage" src={portsnip} alt="..." />
