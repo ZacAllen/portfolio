@@ -51,21 +51,30 @@ class Landing extends Component {
         return (
             <div className='LandingComponent'>
                 <Row gutter={[40, 16]}>
+                    <Col xl={{span: 16, offset: 4}} xs={0}>
+                        <div id="landingTitleWrapper">
+                            <h3 className="text-center" id="title">Hey, I'm Zach Allen!</h3>
+                                {/* <Divider style={dividerStyle}></Divider> */}
+                            <div id ="aboutParagraph" className="text-center">
+                                <p className="aboutTitle">I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
+                                    Media with concentrations in Interaction Design & Experimental Media.
+                                My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
+                                <p className="freeTime">In my spare time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+                <Row gutter={[40, 16]}>
                     <Col xl={{span: 7, offset: 1}} xs={0}>
-                        <h3 className="typewriter" id="title">Hey, I'm Zach Allen!</h3>
-                        <Divider style={dividerStyle}></Divider>
                         <Anime opacity={[0, 1]} translateY={[800, 0]} delay={2800} duration={1000} easing={'linear'}>
                             <div id="aboutContent">
-                                <div id ="aboutParagraph">
-                                    <p>I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
-                                        Media with concentrations in Interaction Design & Experimental Media.</p>
-                                    <p>My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
-                                    <p>In my free time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
-                                </div>
+                                
                                 <Divider style={dividerStyle}></Divider>
                                 <h3 className="aboutText"><span className="skillsText">Languages</span> - Java, JavaScript, jQuery, HTML/CSS, C, C#, Java Processing + p5.js</h3>
                                 <Divider style={dividerStyle}></Divider>
                                 <h3 className="aboutText"><span className="skillsText">Tools</span> - Git, WordPress, Bootstrap, Firebase, React, Node.js</h3>
+                                <Divider style={dividerStyle}></Divider>
+                                <h3 className="aboutText"><span className="skillsText">Multimedia</span> - Adobe Photoshop, Illustrator, XD, GIMP, Figma, Premiere Pro, VEGAS Pro, Tableau</h3>
                                 <Divider style={dividerStyle}></Divider>
                                 <h3 className="aboutText"><span className="skillsText">Skills</span> - Information Design & Visualization, Interaction Design, Graphic Design </h3>
                                 <Divider style={dividerStyle}></Divider>
@@ -120,6 +129,8 @@ class Landing extends Component {
                                     <h3 className="aboutText"><span className="skillsText">Languages</span> - Java, JavaScript, jQuery, HTML/CSS, C, C#, Java Processing + p5.js</h3>
                                     <Divider style={dividerStyle}></Divider>
                                     <h3 className="aboutText"><span className="skillsText">Tools</span> - Git, WordPress, Bootstrap, Firebase, React, Node.js</h3>
+                                    <Divider style={dividerStyle}></Divider>
+                                    <h3 className="aboutText"><span className="skillsText">Multimedia</span> - Adobe Photoshop, Illustrator, XD, GIMP, Figma, Premiere Pro, VEGAS Pro, Tableau</h3>
                                     <Divider style={dividerStyle}></Divider>
                                     <h3 className="aboutText"><span className="skillsText">Skills</span> - Information Design & Visualization, Interaction Design, Graphic Design </h3>
                                     <Divider style={dividerStyle}></Divider>

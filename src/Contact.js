@@ -1,18 +1,30 @@
 import React, {Component, Form, Button, Input, TextArea} from "react";
 import emailjs from 'emailjs-com';
+import swal from 'sweetalert';
 
 function Contact(props) {
 
     const sendEmail = (e) => {
-        console.log(e.target);
         e.preventDefault();
-        
-        emailjs.sendForm('service_1912', 'contact_template2', e.target, 'user_9JRV3Xm9g3W8fkPvlppiT')
+        var n = e.target.elements['name'].value;
+        var em = e.target.elements['email'].value;
+        var m = e.target.elements['message'].value;
+
+        if (!/\S/.test(n) || !/\S/.test(em) ||!/\S/.test(m)) {
+            //if any fields empty
+            swal('Please fill in all fields.')
+        } else {
+            emailjs.sendForm('service_1912', 'contact_template2', e.target, 'user_9JRV3Xm9g3W8fkPvlppiT')
             .then((result) => {
-                console.log(result.text);
+                // console.log(result.text);
+                swal('Your message has been sent!')
             }, (error) => {
                 console.log(error.text);
             })
+        }
+        
+        
+        
     }
 
     return (

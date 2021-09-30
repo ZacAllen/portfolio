@@ -68,7 +68,7 @@
     text-decoration: none;
   }
   .bm-item:hover {
-      color: var(--bs-primaryColor) !important;
+      color: var(--bs-hoverColor) !important;
   }
   
   /* Styling of overlay */

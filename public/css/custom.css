@@ -37,7 +37,7 @@
     border: 2px solid black;
     border-radius: 500px;  
     padding: 5px 10px 5px 10px;
-    color: white;
+    color: var(--bs-fontColor)
 }
 body {
     background-color: var(--bs-primaryColor) !important;
@@ -104,6 +104,24 @@ html {
 }
 .skillsText .letter {
     display: inline-block;
+}
+@media screen and (min-width: 720px) {
+    #title {
+        letter-spacing: 0.3em;
+        color: gray !important;
+    }
+}
+
+#landingTitleWrapper {
+    padding: 5% 0 10% 0;
+}
+.aboutTitle {
+    font-family: var(--bs-bigFont); 
+    font-size: 2.5em;
+}
+.freeTime {
+    font-size: 1.5em;
+    color: gray !important;
 }
 #about {
     /* background-color: white; */
@@ -231,7 +249,7 @@ h2, h1 {
     transition: 0;
   }
   .btn.btn:hover, .btn.btn:focus {
-    background-color: #286B4D;
+    background-color: var(--bs-hoverColor);
     outline: none;
     box-shadow: none;
   }

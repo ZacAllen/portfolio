@@ -4,12 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Divider, Carousel, Image } from 'antd';
 // import resume from './ZAllenResume2021.pdf';
 import { Parallax } from 'react-scroll-parallax';
-import hagia from './hagia.jpg'
 import Modal from 'react-modal';
 import { Container } from "react-bootstrap";
 import Anime from 'react-anime';
 import anime from "animejs/lib/anime.es.js";
 import lifecycle from 'react-pure-lifecycle';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css";
 import word from './word.svg';
 import pdf from './pdf.svg';
 import resumePDF from './myResume.pdf';
@@ -161,7 +162,7 @@ function Resume (props) {
     window.onscroll = () => {
         var modalScale = dummyModal.style.transform;
         var modalScaleX = modalScale.substring(modalScale.indexOf('(') + 1, modalScale.indexOf(')'));
-        console.log(modalScaleX);
+        // console.log(modalScaleX);
         
         // Gotta do this to prevent that weird shadow DOM covering existing elements thing wtf
         if (resumeDoc.style.transform.includes('scale(0)')) {
@@ -315,7 +316,6 @@ function Resume (props) {
             textAlign: 'center',
         };
         const selectFileTypeWordMobile = () => {
-            console.log('WORD NOW')
             let word = document.getElementById('wordMobile');
             let pdf = document.getElementById('pdfMobile');
             let downloadButton = document.getElementById('dlbuttonMobile')
@@ -325,7 +325,6 @@ function Resume (props) {
            
         }
         const selectFileTypePdfMobile = () => {
-            console.log('PDF NOW')
             let word = document.getElementById('wordMobile');
             let pdf = document.getElementById('pdfMobile');
             let downloadButton = document.getElementById('dlbuttonMobile')
@@ -351,7 +350,7 @@ function Resume (props) {
                 <Row gutter={[40, 16]} className="vw-100">
                     <Col xl={{span: 24}} xs={0}>
                     {/* <Parallax className="custom-class" y={[20, -20]}> */}
-                   
+               
                         <div id="firstSection" className="resumeContainer" style={ContainerStyle}>
                             <div id="resume" className="" style={firstSectionStyle}>
                                 <div style={titleStyleTop}>
@@ -389,6 +388,7 @@ function Resume (props) {
                                 </div>
                             </div> 
                         </div>
+          
                         {/* </Parallax> */}
                     </Col>
                     {/* --------------------------------------------------------------------------------MOBILE------------------------------------------------------------------- */}

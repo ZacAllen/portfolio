@@ -16,10 +16,11 @@
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
   /* --bs-primary: #46A563  !important; */
-  --bs-primaryColor: #2de664;
+  --bs-primaryColor: #ffffff;
   --bs-fontColor: #000000;
   --bs-activeButtonBGColor: #000000;
   --bs-primaryOpaque: rgba(45, 230, 100, 0.3); 
+  --bs-hoverColor: #286B4D;
   --bs-secondary: #FFE5D0 !important;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -287,7 +288,9 @@ footer.footer .social-link:hover {
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: rgba(33, 37, 41, 0.2);
+  /* align-items: center;
+  justify-content: center; */
+  /* background-color: rgba(33, 37, 41, 0.2); */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -296,10 +299,11 @@ footer.footer .social-link:hover {
 .portfolio-item .caption .caption-content {
   color: #fff;
   margin: auto 2rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
 }
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .portfolio-item .caption .caption-content p {

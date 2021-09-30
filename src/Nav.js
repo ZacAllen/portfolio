@@ -4,6 +4,8 @@ import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Scrollspy from 'react-scrollspy'
 import { slide as Menu } from 'react-burger-menu'
+import logo from './logo.png';
+import logodark from './logodark.png';
 
 class Nav extends Component {
     showSettings (event) {
@@ -13,13 +15,15 @@ class Nav extends Component {
     render() {
         var dark = false;
         const switchDarkMode = (btn) => {
-            console.log("TIME FOR DARKNESS!!!")
             let on = document.getElementById('on');
             let off = document.getElementById('off');
+            let logoImg = document.getElementById('logo');
 
             on.className = "buttonActive";
                 on.style.color = "#FFFFFF";
             off.className = "buttonInactive";
+
+            logoImg.src = logodark;
 
             let root = document.documentElement;
             root.style.setProperty('--bs-primaryColor', '#212529');
@@ -33,13 +37,16 @@ class Nav extends Component {
         const offDarkMode = (btn) => {
             let on = document.getElementById('on');
             let off = document.getElementById('off');
+            let logoImg = document.getElementById('logo');
 
             off.className = "buttonActive";
-                // off.style.color = "#FFFFFF";
+                on.style.color = "#000000";
             on.className = "buttonInactive";
 
+            logoImg.src = logo;
+
             let root = document.documentElement;
-            root.style.setProperty('--bs-primaryColor', '#2de664');
+            root.style.setProperty('--bs-primaryColor', '#FFFFFF');
             root.style.setProperty('--bs-fontColor', '#000000');
             root.style.setProperty('--bs-activeButtonBGColor', '#000000')
             root.style.setProperty('--bs-bgOpacityValue', 0.3);
@@ -51,10 +58,15 @@ class Nav extends Component {
             if (!dark) {
                 let on = document.getElementById('on');
                 let off = document.getElementById('off');
+                let logoImg = document.getElementById('logoMobile');
+                let onMobile = document.getElementById('onMobile');
 
                 on.className = "buttonActive";
                     on.style.color = "#FFFFFF";
                 off.className = "buttonInactive";
+                onMobile.innerHTML = "Dark Mode (On)"
+
+                logoImg.src = logodark;
 
                 let root = document.documentElement;
                 root.style.setProperty('--bs-primaryColor', '#212529');
@@ -67,13 +79,18 @@ class Nav extends Component {
             } else {
                 let on = document.getElementById('on');
                 let off = document.getElementById('off');
+                let logoImg = document.getElementById('logoMobile');
+                let onMobile = document.getElementById('onMobile');
 
                 off.className = "buttonActive";
                     // off.style.color = "#FFFFFF";
                 on.className = "buttonInactive";
+                onMobile.innerHTML = "Dark Mode (Off)"
+
+                logoImg.src = logo;
 
                 let root = document.documentElement;
-                root.style.setProperty('--bs-primaryColor', '#2de664');
+                root.style.setProperty('--bs-primaryColor', '#FFFFFF');
                 root.style.setProperty('--bs-fontColor', '#000000');
                 root.style.setProperty('--bs-activeButtonBGColor', '#000000')
                 root.style.setProperty('--bs-bgOpacityValue', 0.3);
@@ -89,7 +106,7 @@ class Nav extends Component {
                     <div className = 'NavComponent'>
                         <nav  id = "myNavbar" className="navbar navbar-expand-md navbar-dark fixed-top">
                             <div className="container navContainer">
-                            <a className="navbar-brand abs px-5">Z.ALLEN</a>
+                            <a className="navbar-brand abs px-5"><img id="logo" src={logo} style={{height: '50%', width: '50%'}}></img></a>
                             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                                     <Scrollspy className="navbar-nav mr-auto" items={['home', 'portfolio', 'resume', 'contact']} currentClassName="active"
                                     offset={-10}>
@@ -128,12 +145,12 @@ class Nav extends Component {
                             <a id="PORTFOLIO_mobile" className="menu-item" href="#portfolio">Portfolio</a>
                             <a id="RESUME_mobile" className="menu-item" href="#firstSectionMobile">Resume</a>
                             <a id="CONTACT_mobile" className="menu-item" href="#contact">Contact</a>
-                            <a  className="menu-item" ><span id= "onMobile" className="" onClick={switchDarkModeMobile}>Dark Mode</span></a>
+                            <a  className="menu-item" ><span id= "onMobile" className="" onClick={switchDarkModeMobile}>Dark Mode (Off)</span></a>
                             
                         </Menu>
                         <nav  id = "myNavbar" className="navbar navbar-expand-sm navbar-dark fixed-top">
                             <div className="container navContainer">
-                                <a className="navbar-brand abs">Z.ALLEN</a>
+                                <a className="navbar-brand abs"><img id="logoMobile" src={logo} style={{height: '30%', width: '30%'}}></img></a>
                                 
                                 <a className="px-5" id = "menuTitle">Menu</a>
                                

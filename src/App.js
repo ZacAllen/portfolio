@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className = 'App' style={{position: 'relative'}}>
-        <Backgrounds></Backgrounds>
+        {/* <Backgrounds></Backgrounds> */}
 
         <div style={{position: 'absolute'}}>
           <Nav></Nav>
