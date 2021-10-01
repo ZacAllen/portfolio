@@ -1,6 +1,7 @@
 import React, {Component, Form, Button, Input, TextArea} from "react";
 import emailjs from 'emailjs-com';
 import swal from 'sweetalert';
+import env from 'react-dotenv';
 
 function Contact(props) {
 
@@ -13,8 +14,22 @@ function Contact(props) {
         if (!/\S/.test(n) || !/\S/.test(em) ||!/\S/.test(m)) {
             //if any fields empty
             swal('Please fill in all fields.')
-        } else {
-            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+        } 
+        //for running locally
+        // else {
+        //     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+        //     .then((result) => {
+        //         // console.log(result.text);
+        //         swal('Your message has been sent!')
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     })
+        // }
+
+        
+        //for running on server
+        else {
+            emailjs.sendForm(env.REACT_APP_SERVICE_ID, env.REACT_APP_TEMPLATE_ID, e.target, env.REACT_APP_USER_ID)
             .then((result) => {
                 // console.log(result.text);
                 swal('Your message has been sent!')
