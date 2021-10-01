@@ -1,2 +1,2 @@
 [build]
-command = "CI= npm run build"
+command = "node ./create-env.js && CI= npm run build"
