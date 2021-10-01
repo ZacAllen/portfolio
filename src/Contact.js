@@ -14,7 +14,7 @@ function Contact(props) {
             //if any fields empty
             swal('Please fill in all fields.')
         } else {
-            emailjs.sendForm('service_1912', 'contact_template2', e.target, 'user_9JRV3Xm9g3W8fkPvlppiT')
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
             .then((result) => {
                 // console.log(result.text);
                 swal('Your message has been sent!')
