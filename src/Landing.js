@@ -7,6 +7,7 @@ import Waypoint from '../node_modules/waypoints/lib/noframework.waypoints.min.js
 import me1 from './assets/img/me1.png';
 import me2 from './assets/img/me2.png';
 import me3 from './assets/img/me3.png';
+import me4 from './assets/img/me4.png';
 
 
 
@@ -89,6 +90,8 @@ class Landing extends Component {
                                     <Image src={me1} preview={false} width={'85%'}></Image>
                 
                                     <Image  src={me2} preview={false} width={'85%'}></Image>
+
+                                    <Image  src={me4} preview={false} width={'85%'}></Image>
                             </Carousel>
                         </Anime>
                     </Col> 
@@ -105,6 +108,8 @@ class Landing extends Component {
                                     <Image src={me1} preview={false} width={'100%'}></Image>
                 
                                     <Image  src={me2} preview={false} width={'100%'}></Image>
+
+                                    <Image  src={me4} preview={false} width={'100%'}></Image>
                             </Carousel>
                         </Anime>
                     </Col> 
