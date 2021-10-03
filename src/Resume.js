@@ -211,8 +211,8 @@ function Resume (props) {
     };
 
         const DummyModalStyle = {
-            width: '18%',
-            height: '33%',
+            width: '22%',
+            height: '40%',
             backgroundColor: 'var(--bs-resumeSwoop)',
             position: 'absolute',  
             textAlign: 'center',
@@ -369,7 +369,7 @@ function Resume (props) {
                                         </Col>
                                     </Row>
                                     <a id = 'dlbutton' href={resumeWord} download="ZAllenResume" target='_blank'>
-                                        <button type="download" className="btn btn-primary DLButton">Download</button>
+                                        <button type="download" className="btn btn-primary DLButton text-center">Download</button>
                                     </a>
                                     
                                     <p style={{fontSize: '2vh'}}>Scroll to view</p>
