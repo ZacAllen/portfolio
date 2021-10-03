@@ -306,7 +306,7 @@ h2, h1 {
   }
   .resumeTitle {
       color: white !important;
-      font-size: 10rem;
+      font-size: 15vh;
       letter-spacing: 0.1em;
       padding: 0 0 10px 0;
   }
