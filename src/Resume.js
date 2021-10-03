@@ -235,7 +235,7 @@ function Resume (props) {
         const firstSectionStyle = {
             // backgroundColor: "#FFFFFF",
             position: 'sticky',
-            top: 0,
+            top: '10%',
             width: '100vw',
             height: '100vh',
             display: 'flex',

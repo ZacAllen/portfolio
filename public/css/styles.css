@@ -282,7 +282,7 @@ footer.footer .social-link:hover {
   /* overflow: hidden; */
   max-width: 530px;
   margin: auto auto 1rem;
-  border: 100px solid rgba(0, 0, 0, 0.8);
+  border: 64px solid rgba(0, 0, 0, 0.8);
 }
 .portfolio-item .caption {
   display: flex;

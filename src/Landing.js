@@ -64,6 +64,18 @@ class Landing extends Component {
                             </div>
                         </div>
                     </Col>
+                    <Col lg={{span: 20, offset: 2}} xl ={0} xs={0}>
+                    <div id="landingTitleWrapper">
+                            <h3 className="text-center" id="title">Hey, I'm Zach Allen!</h3>
+                                {/* <Divider style={dividerStyle}></Divider> */}
+                            <div id ="aboutParagraph" className="text-center">
+                                <p className="aboutTitle">I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
+                                    Media with concentrations in Interaction Design & Experimental Media.
+                                My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
+                                <p className="freeTime">In my spare time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
+                            </div>
+                        </div>
+                    </Col>
                 </Row>
                 <Row gutter={[40, 16]}>
                     <Col xl={{span: 7, offset: 1}} xs={0}>

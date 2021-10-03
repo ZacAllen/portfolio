@@ -83,7 +83,7 @@ html {
 .aboutText {
     font-family: var(--bs-mediumFont);
     font-weight: normal;
-    font-size: 1em;
+    font-size: 1.2rem;
 }
 #aboutParagraph {
     /* padding-top: 5%; */
@@ -117,7 +117,7 @@ html {
 }
 .aboutTitle {
     font-family: var(--bs-bigFont); 
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 .freeTime {
     font-size: 1.5em;
@@ -306,8 +306,9 @@ h2, h1 {
   }
   .resumeTitle {
       color: white !important;
-      font-size: 10em;
+      font-size: 10rem;
       letter-spacing: 0.1em;
+      padding: 0 0 10px 0;
   }
   @media screen and (max-width: 500px) {
     .resumeTitle {
