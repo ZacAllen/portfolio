@@ -211,16 +211,12 @@ function Resume (props) {
     };
 
         const DummyModalStyle = {
-            // width: '350px',
-            // height: '350px',
             width: '18%',
             height: '33%',
             backgroundColor: 'var(--bs-resumeSwoop)',
-            // border: '2px solid var(--bs-primaryColor)',
             position: 'absolute',  
-            // zIndex: 1000,
             textAlign: 'center',
-            // borderRadius: '50%',
+            display: 'flex'
         };
         const ContainerStyle = {
             backgroundColor:"#000000", 
@@ -359,7 +355,7 @@ function Resume (props) {
                                 {/* MODAL */}
                                 <div id="dummyModal"className="dummy" style={DummyModalStyle}>
                                     <div id="modalContents">
-                                    <h3 className="downloadMyResume">File Type</h3>
+                                    <h3 className="downloadMyResume" style={{fontSize: '4vh'}}>File Type</h3>
                                     <Row>
                                         <Col xl={{span: 12}}>
                                         <div>
@@ -376,7 +372,7 @@ function Resume (props) {
                                         <button type="download" className="btn btn-primary DLButton">Download</button>
                                     </a>
                                     
-                                    <p>Scroll to view</p>
+                                    <p style={{fontSize: '2vh'}}>Scroll to view</p>
                                     </div>
                                 </div>
                                 {/* RESUME IFRAME */}
