@@ -258,6 +258,7 @@ function Resume (props) {
             height: '60%',
             position: 'absolute',
             paddingBottom: 0,
+            top: '10%'
         }
         const resumePDFStyle = {
             width: '100%',
