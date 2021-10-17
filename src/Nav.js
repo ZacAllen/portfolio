@@ -10,7 +10,16 @@ import logodark from './logodark.png';
 class Nav extends Component {
     showSettings (event) {
         event.preventDefault();
-      }
+    }
+    constructor() {
+        super();
+        this.navigate = this.navigate.bind(this); 
+     }
+     navigate(e, id) {
+        e && e.preventDefault(); // to avoid the link from redirecting
+        const elementToView = document.getElementById(id);
+        elementToView .scrollIntoView(); 
+     }
 
     render() {
         var dark = false;
@@ -111,16 +120,16 @@ class Nav extends Component {
                                     <Scrollspy className="navbar-nav mr-auto" items={['home', 'portfolio', 'resume', 'contact']} currentClassName="active"
                                     offset={-10}>
                                     <li id ="HOME" className="nav-item">
-                                        <a id= "homelink" className="nav-link" href="#home">Home</a>
+                                        <a id= "homelink" className="nav-link" href="#" onClick={(e=> this.navigate(e, 'home'))}>Home</a>
                                     </li>
                                     <li id="PORTFOLIO" className="nav-item">
-                                        <a id="portfoliolink" className="nav-link" href="#portfolio">Portfolio</a>
+                                        <a id="portfoliolink" className="nav-link" href="#" onClick={(e=> this.navigate(e, 'portfolio'))}>Portfolio</a>
                                     </li>
                                     <li id="RESUME" className="nav-item">
-                                        <a id = "aboutlink" className="nav-link" href="#firstSection">Resume</a>
+                                        <a id = "aboutlink" className="nav-link" href="#" onClick={(e=> this.navigate(e, 'firstSection'))}>Resume</a>
                                     </li>
                                     <li id="CONTACT" className="nav-item">
-                                        <a id = "contactlink" className="nav-link" href="#contact">Contact</a>
+                                        <a id = "contactlink" className="nav-link" href="#" onClick={(e=> this.navigate(e, 'contact'))}>Contact</a>
                                     </li>
                                     
                                     <li className="nav-item darkMode">
