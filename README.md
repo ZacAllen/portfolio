@@ -4,7 +4,7 @@
 This is my personal website made from scratch with React and hosted with Netlify. 
 
 ### Logs
-#### Feb. 3, 2021
+#### Feb. 3, 2022
 Added Numberle project to projects section.
 TODO: 
 - Captcha for email form submission.
