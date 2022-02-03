@@ -116,6 +116,19 @@ class Portfolio extends Component {
                     </Row>
                     <Row>
                         <Col>
+                            <a className="portfolio-item" href="https://numberle.netlify.app/" target="_blank" >
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">Numberle</div>
+                                        <p className="mb-0 captionMobile">A Wordle parody game made in React.</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src={flag} alt="..." />
+                            </a>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
                             <a className="portfolio-item" href="https://github.com/ZacAllen/flags-of-europe" target="_blank" >
                                 <div className="caption">
                                     <div className="caption-content">

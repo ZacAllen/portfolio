@@ -124,7 +124,7 @@ class Landing extends Component {
 
                                     <Image  src={me4} preview={false} width={'100%'}></Image>
 
-                                    <Image src={me5} preview={false} width={'85%'}></Image>
+                                    <Image src={me5} preview={false} width={'100%'}></Image>
                             </Carousel>
                         </Anime>
                     </Col> 
