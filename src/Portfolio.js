@@ -6,6 +6,7 @@ import { Parallax } from 'react-scroll-parallax';
 import bg from './assets/img/bg.jpg';
 import flag from './assets/img/flag.JPG'
 import phone from './assets/img/phone.JPG'
+import numberle from './assets/img/numberle.JPG'
 import portsnip from './assets/img/portsnip.JPG'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
@@ -18,6 +19,19 @@ class Portfolio extends Component {
            <Row gutter={[40, 16]}>
                 <Col xl={{span: 13, offset: 1}} xs ={0}>
                 <ScrollAnimation animateIn="fadeInUp" animatePreScroll={false}>
+                    <Row style={{marginBottom: '5%'}}>
+                            <Col xl={{span: 23}}>
+                                <a className="portfolio-item" href="https://numberle.netlify.app/" target="_blank" >
+                                    <div className="caption">
+                                        <div className="caption-content">
+                                            <div className="h2 portfolioText">Numberle</div>
+                                            <p className="mb-0">A Wordle parody game made in React.</p>
+                                        </div>
+                                    </div>
+                                    <img className="img-fluid portfolioImage" src={numberle} alt="..." />
+                                </a>
+                            </Col>
+                        </Row>
                         <Row style={{marginBottom: '5%'}}>
                             <Col xl={{span: 23}}>
                                 <a className="portfolio-item" href="https://github.com/ZacAllen/flags-of-europe" target="_blank" >
