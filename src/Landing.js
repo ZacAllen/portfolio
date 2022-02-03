@@ -58,8 +58,7 @@ class Landing extends Component {
                             <h3 className="text-center" id="title">Hey, I'm Zach Allen!</h3>
                                 {/* <Divider style={dividerStyle}></Divider> */}
                             <div id ="aboutParagraph" className="text-center">
-                                <p className="aboutTitle">I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
-                                    Media with concentrations in Interaction Design & Experimental Media.
+                                <p className="aboutTitle">I'm a developer based in Atlanta.
                                 My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
                                 <p className="freeTime">In my spare time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
                             </div>
@@ -70,8 +69,7 @@ class Landing extends Component {
                             <h3 className="text-center" id="title">Hey, I'm Zach Allen!</h3>
                                 {/* <Divider style={dividerStyle}></Divider> */}
                             <div id ="aboutParagraph" className="text-center">
-                                <p className="aboutTitle">I'm a developer based in Atlanta, GA and a recent graduate from Georgia Tech. I completed my Bachelor's in Computational 
-                                    Media with concentrations in Interaction Design & Experimental Media.
+                                <p className="aboutTitle">I'm a developer based in Atlanta
                                 My experience is in UI/UX design and front-end software development with a background in programming, visual design, and user research.</p>
                                 <p className="freeTime">In my spare time, I enjoy gaming, studying history, taekwondo, and fencing.</p>    
                             </div>
