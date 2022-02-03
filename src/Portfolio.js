@@ -123,7 +123,7 @@ class Portfolio extends Component {
                                         <p className="mb-0 captionMobile">A Wordle parody game made in React.</p>
                                     </div>
                                 </div>
-                                <img className="img-fluid portfolioImage" src={flag} alt="..." />
+                                <img className="img-fluid portfolioImage" src={numberle} alt="..." />
                             </a>
                         </Col>
                     </Row>
