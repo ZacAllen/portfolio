@@ -31,7 +31,8 @@
   --bs-grayscale: grayscale(0%);
   --bs-resumeSwoop: var(--bs-primaryColor);
   --bs-bigFont:'Bebas Neue', cursive;
-  --bs-mediumFont: 'Helvetica', sans-serif;
+  /* --bs-mediumFont: 'Helvetica', sans-serif; */
+  --bs-mediumFont: 'Montserrat', sans-serif;
 }
 
 *,

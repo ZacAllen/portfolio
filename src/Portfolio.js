@@ -8,6 +8,7 @@ import flag from './assets/img/flag.JPG'
 import phone from './assets/img/phone.JPG'
 import numberle from './assets/img/numberle.JPG'
 import portsnip from './assets/img/portsnip.JPG'
+import sveltedex from './assets/img/sveltedex.jpg'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import 'pattern.css/dist/pattern.css'
@@ -19,7 +20,20 @@ class Portfolio extends Component {
            <Row gutter={[40, 16]}>
                 <Col xl={{span: 13, offset: 1}} xs ={0}>
                 <ScrollAnimation animateIn="fadeInUp" animatePreScroll={false}>
-                    <Row style={{marginBottom: '5%'}}>
+                        <Row style={{marginBottom: '5%'}}>
+                            <Col xl={{span: 23}}>
+                                <a className="portfolio-item" href="https:sveltedex.web.app" target="_blank" >
+                                    <div className="caption">
+                                        <div className="caption-content">
+                                            <div className="h2 portfolioText">Sveltedex</div>
+                                            <p className="mb-0">A Pokemon encyclopedia modeled after the in-game Pokedex tool; created with Svelte as frontend framework and hosted with Firebase.</p>
+                                        </div>
+                                    </div>
+                                    <img className="img-fluid portfolioImage" src={sveltedex} alt="..." />
+                                </a>
+                            </Col>
+                        </Row>
+                        <Row style={{marginBottom: '5%'}}>
                             <Col xl={{span: 23}}>
                                 <a className="portfolio-item" href="https://numberle.netlify.app/" target="_blank" >
                                     <div className="caption">
@@ -112,6 +126,19 @@ class Portfolio extends Component {
                                     <h1 id = "myProjects" className="mb-5">MY PROJECTS</h1>
                                 </div>           
                             </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <a className="portfolio-item" href="https://sveltedex.web.app" target="_blank" >
+                                <div className="caption">
+                                    <div className="caption-content">
+                                        <div className="h2 portfolioText">Sveltedex</div>
+                                        <p className="mb-0 captionMobile">A Pokemon encyclopedia modeled after the in-game Pokedex tool; created with Svelte as frontend framework and hosted with Firebase.</p>
+                                    </div>
+                                </div>
+                                <img className="img-fluid portfolioImage" src={sveltedex} alt="..." />
+                            </a>
                         </Col>
                     </Row>
                     <Row>
