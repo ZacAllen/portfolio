@@ -22,7 +22,7 @@ class Portfolio extends Component {
                 <ScrollAnimation animateIn="fadeInUp" animatePreScroll={false}>
                         <Row style={{marginBottom: '5%'}}>
                             <Col xl={{span: 23}}>
-                                <a className="portfolio-item" href="https:sveltedex.web.app" target="_blank" >
+                                <a className="portfolio-item" href="https://sveltedex.web.app" target="_blank" >
                                     <div className="caption">
                                         <div className="caption-content">
                                             <div className="h2 portfolioText">Sveltedex</div>
